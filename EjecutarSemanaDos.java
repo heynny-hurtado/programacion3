@@ -1,5 +1,5 @@
 public class EjecutarSemanaDos{
     public static void main(String[]args){
-        System.out.println("como estas");
+        System.out.println("holis...");
     }
 }
