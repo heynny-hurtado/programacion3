@@ -15,5 +15,22 @@ public class Ejercicio8{
         for (int i=0; i<a.length;i++){
             System.out.println("a["+i+"]="+a[i]);
         }
+
+        //debemos de hacer  que busque el mayor y el menor 
+        int mayor = a[0];
+        int menor = a[0];
+
+        for (int i = 1; i<a.length; i++){
+            if(a[i]>mayor){
+                mayor = a[i]; //recorrido para saber si el numero que sigue es mayor a 
+
+            }
+
+            if (a[i]<menor){
+                menor = a[i]; // recorrido para sabe si el numero es menor 
+            }
+        }
+
+
     }
 }
