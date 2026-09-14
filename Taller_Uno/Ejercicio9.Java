@@ -17,5 +17,11 @@ public class Ejercicio9{
       //tambien hicimos de forma random el generador del nimero que se va aa buscar
       h = (int)(Math.random()*(max-min+1))+min;
 
+        //el for para contar las repeticiones 
+        for(int i =0; i< a.length;i ++){
+            it(a[i]==h){
+                cont++;
+            }
+        }
     }
 }
