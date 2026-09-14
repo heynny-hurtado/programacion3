@@ -11,7 +11,17 @@ public class Ejercicio12 {
         //crear x
         int x = 2;
         int p = 0; //p para posición
-        
+
+        //creal el for para el arreglo a
+        for(int i = 0;i<a.length; i++){
+
+            // el if para X
+            if (a[i]==x){ b[p]=i;p++;
+                
+            }
+
+            
+        }
     }
     
 }
