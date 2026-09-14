@@ -23,6 +23,17 @@ public class Ejercicio11 {
             //esta parte de abajo no permite que los nu,eros se guarden de 10 a -10 pero aleatoriamente
             a[i]=(int)(Math.random()*(10-(10)+1)+(-10));
         }
+
+        //creaion del for para los arreglos negattivos positivos y ceros 
+
+        for (int i=0; i< a.length; i++){
+
+            //condición con if declarando que si el numero que aparezca en el arreglo es menor a 0 lo asocie como negativo
+            if (a[i]<0){
+                negativos[n]= a[i]; n++;
+            }
+            
+        }
     }
     
 }
