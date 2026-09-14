@@ -40,7 +40,20 @@ public class Ejercicio11 {
             if (a[i]== 0){
                 positivos[psi]= a[i]; c++;            }
         }
+        System.out.println("los Negativos son:"); 
+        for (int i = 0; i < n; i++){
+            System.out.println(negativos[i]+"");
+        }
+        System.out.println("Los positivos son:");
+        for (int i = 0; i < psi; i++){
+            System.out.println(positivos[i]+"");
+        }
+        System.out.println("los ceros son:");
+        for (int i = 0; i<c; i++){
+            System.out.println(cero[i]+"");
+        }
+        }
 
     }
     
-}
+
