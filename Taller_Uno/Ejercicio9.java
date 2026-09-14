@@ -10,6 +10,12 @@ public class Ejercicio9{
         int h;
         int cont = 0; //cont es contador profe
      
+
+     //tenia un error porque no hice el for para el arreglo de a
+
+    for (int i = 0; i< a.length; i++){
+        a[i]= (int)(Math.random()*(max- min +))+min;
+    }
       //vamos a crear el for 
 
       for (int i= 0; i<a.length; i++){
