@@ -1,4 +1,4 @@
-//elimine el ejercicio 9 porque do podia darle al run lo copie y pegue
+//elimine el ejercicio 9 porque no podia darle al run lo copie y pegue
 
 public class Ejercicio9{
     public static void main(String[]args){
