@@ -33,13 +33,14 @@ public class Ejercicio11 {
             if (a[i]<0){
                 negativos[n]= a[i]; n++;
             }
-            if (a[i]>){
+            if (a[i]>0){
                 positivos[psi] = a[i];
                 psi++;
             }
             if (a[i]== 0){
-                positivos[psi]= a[i]; a++;            }
+                positivos[psi]= a[i]; c++;            }
         }
+
     }
     
 }
