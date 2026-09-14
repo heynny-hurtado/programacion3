@@ -13,6 +13,9 @@ public class Ejercicio10 {
             s[i]=(int)(Math.random()*(max-min+1))+min;
             System.out.println("s["+i+"]="+s[i]); //Sysout para imprimir y visualizar el arreglo
         }
-        
+        //la pregunta es como aremos que se sumen el primero con el ultimo, el segundo con el penultimo etc...
+        //debemos crear otro arreglo que sume y haga esto tomando el arreglo de a
+
+        int[] e =new int [s.length/2+]; // el arreglo de suma de estremos  /2 divide el tamaño entre 2
     }
 }
