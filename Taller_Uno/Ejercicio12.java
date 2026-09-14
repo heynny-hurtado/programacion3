@@ -30,13 +30,17 @@ public class Ejercicio12 {
             }
         }
 
-        //ahora si el for que recorre todo el arreglo a
-        for (int i = 0; i <a.length;i++){
-            // la condicion que busca si en la posición i se encuentra el numero X que buscamos
-            if(a[i]==x);{
-                b[p]= i; p++;
-            }
+        //los Sysout para imprimir  y ver el resultado
+        System.out.println("El numero buscado es:"+x);
+        System.out.println("se encontro en las posiciones");
+
+        for(int i = 0; i < p; i++){
+            System.out.println("b["+i+"]="+b[i] );
+
+        }
+        
+        
         }
     }
     
-}
+
