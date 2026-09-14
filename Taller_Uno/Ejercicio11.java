@@ -17,8 +17,8 @@ public class Ejercicio11 {
         int c = 0;
 
         //agregue este para poder modificar los numeros sin cambiar nada en el for
-        int max = 10;
-        int min=-10;
+        int max = 5;
+        int min=-5;
 
         //creación del for
         for (int i= 0; i< a.length; i++){
