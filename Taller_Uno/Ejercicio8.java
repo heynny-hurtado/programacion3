@@ -27,7 +27,7 @@ public class Ejercicio8{
             }
 
             if (a[i]<menor){
-                menor = a[i]; // recorrido para sabe si el numero es menor 
+                menor = a[i]; // recorrido para sabe si el numero es menor
             }
         }
 
