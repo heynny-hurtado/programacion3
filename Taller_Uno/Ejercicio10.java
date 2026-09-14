@@ -16,6 +16,17 @@ public class Ejercicio10 {
         //la pregunta es como aremos que se sumen el primero con el ultimo, el segundo con el penultimo etc...
         //debemos crear otro arreglo que sume y haga esto tomando el arreglo de a
 
-        int[] e =new int [s.length/2+]; // el arreglo de suma de estremos  /2 divide el tamaño entre 2
+        int[] e =new int [s.length/2]; // el arreglo de suma de estremos  /2 divide el tamaño entre 2
+    
+        for(int i = 0; i<e.length; i++){
+            //vamos a crear la suma en el arreglo e para sumar los arreglos de s
+            e[i]=s[i]+s[s.length -1-i];
+            
+            System.out.println("e["+i+"]="+e[i]); // de esta forma se puede ver lo que sucedio con el arreglo s y el ecomo termino
+        }
+    
     }
+
+
+    
 }
