@@ -16,6 +16,7 @@ public class Ejercicio11 {
         int psi = 0;
         int c = 0;
 
+        //agregue este para poder modificar los numeros sin cambiar nada en el for
         int max = 10;
         int min=-10;
 
