@@ -6,7 +6,7 @@ public class Ejercicio13 {
     //crear el arreglo de a
     int []a =new int[10];
 
-    //crreamos el arreglo de los mayores y menores
+    //creamos el arreglo de los mayores y menores
     int[ ]mayores = new int[a.length];
     int[]menores = new int [a.length];
     
@@ -35,7 +35,7 @@ public class Ejercicio13 {
     int m = 0;
     int n = 0;
 
-    // ahora su creamos el if y las condiciones para separar  los mayores y menores
+    // ahora si creamos elfor y el if  las condiciones para separar  los mayores y menores
 
     for (int i =0; i<a.length; i++){
 
