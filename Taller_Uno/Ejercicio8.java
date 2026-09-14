@@ -41,13 +41,23 @@ public class Ejercicio8{
 
         //este es una condicion si: es como decir si el numero encontrado  es igual al valor mayor se cuenta 1 
             if(a[i]==mayor){
-                cMayor++;
+                cMayor++; //profe esto lo investigue
 
             }
+
         //este es el mismo epro con los menores
             if(a[i]== menor){
                 cMenor++;
             }
         }
+        //me imprime el numero mayor del arreglo
+        System.out.println("El número mayor es:"+ mayor);
+       //me imprime la cantidad de veces que se repite ese numero
+        System.out.println("Cantidad de veces repetida:"+cMayor+ "veces");
+
+         //me imprime el numero menor el arreglo
+        System.out.println("El número menor es:"+ menor);
+        //me imprime la cantidad de veces que se repite ese numero
+        System.out.println("Cantidad de veces repetida:"+ cMenor);
     }
 }
