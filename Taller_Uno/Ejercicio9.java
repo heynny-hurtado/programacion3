@@ -23,7 +23,7 @@ public class Ejercicio9{
             System.out.println("a["+i+"]="+a[i]); //para mirar los numeros que el agregue en este arreglo y confirmar si si da
       
       }  
-      //tambien hicimos de forma random el generador del nimero que se va aa buscar
+      //tambien hicimos de forma random el generador del número que se va aa buscar
       h = (int)(Math.random()*(max-min+1))+min;
 
         //el for para contar las repeticiones 
