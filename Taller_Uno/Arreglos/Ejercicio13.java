@@ -23,6 +23,12 @@ public class Ejercicio13 {
     //para calcular la suma
     int suma = 0;
 
+    for (int i = 0; i < a.length; i++){
+        suma = suma + a[i];
+    }
+    //calular la media 
+    doduble media = (double)suma /a.length;
+    System.out.println("La media es:"+ media);
 
     }
 
