@@ -7,7 +7,14 @@ public class Ejercicio11 {
         int[] a= new int[10];
 
         //vamos a crear los arreglos para negativos positivos y ceros
-        int[] n
+        int[] negativos = new int[a.length];
+        int[] positivos = new int[a.length];
+        int[] cero = new int [a.length];
+        
+        //para los contadores de posición 
+        int n= 0;  
+        int psi = 0;
+        int c = 0;
 
         
 
