@@ -29,8 +29,25 @@ public class Ejercicio8{
             if (a[i]<menor){
                 menor = a[i]; // recorrido para sabe si el numero es menor
             }
+
         }
+        // creamos los dos contadores esto nos permitirá saber cuantas veces se contara el mayo y cuantas el menor  y lo inicializamos en 0
 
+        int cMayor = 0;
+        int cMenor = 0;
 
+        //creamos el for para revisar los elementos del arreglo
+        for (int i =0; i< a.length; i++){
+
+        //este es una condicion si: es como decir si el numero encontrado  es igual al valor mayor se cuenta 1 
+            if(a[i]==mayor){
+                cMayor++;
+
+            }
+        //este es el mismo epro con los menores
+            if(a[i]== menor){
+                cMenor++;
+            }
+        }
     }
 }
