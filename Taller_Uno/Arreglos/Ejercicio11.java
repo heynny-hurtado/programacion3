@@ -1,3 +1,4 @@
+package Arreglos;
 public class Ejercicio11 {
 
     public static void main (String[]agrs){

@@ -1,3 +1,4 @@
+package Arreglos;
 
 
 //vamos a crear el random para generar 30 numeros, con lo mismo que vimos en la clase 2

@@ -1,3 +1,4 @@
+package Arreglos;
 public  class Ejercicio7{
     
 

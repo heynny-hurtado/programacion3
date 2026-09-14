@@ -1,3 +1,4 @@
+package Arreglos;
 //elimine el ejercicio 9 porque no podia darle al run lo copie y pegue
 
 public class Ejercicio9{
