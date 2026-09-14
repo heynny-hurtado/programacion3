@@ -45,7 +45,7 @@ public class Ejercicio8{
 
             }
 
-        //este es el mismo epro con los menores
+        //este es el mismo pero con los menores
             if(a[i]== menor){
                 cMenor++;
             }

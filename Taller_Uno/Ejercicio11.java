@@ -5,6 +5,10 @@ public class Ejercicio11 {
         
         //creación del arreglo a  
         int[] a= new int[10];
+
+        //vamos a crear los arreglos para negativos positivos y ceros
+        int[] n
+
         
 
         //creación del for
