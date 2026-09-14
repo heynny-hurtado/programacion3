@@ -16,12 +16,13 @@ public class Ejercicio11 {
         int psi = 0;
         int c = 0;
 
-        
+        int max = 10;
+        int min=-10;
 
         //creación del for
         for (int i= 0; i< a.length; i++){
             //esta parte de abajo no permite que los nu,eros se guarden de 10 a -10 pero aleatoriamente
-            a[i]=(int)(Math.random()*(10-(10)+1)+(-10));
+            a[i]=(int)(Math.random()*(max-min+1))+min;
         }
 
         //creaion del for para los arreglos negattivos positivos y ceros 
@@ -32,7 +33,12 @@ public class Ejercicio11 {
             if (a[i]<0){
                 negativos[n]= a[i]; n++;
             }
-            
+            if (a[i]>){
+                positivos[psi] = a[i];
+                psi++;
+            }
+            if (a[i]== 0){
+                positivos[psi]= a[i]; a++;            }
         }
     }
     
