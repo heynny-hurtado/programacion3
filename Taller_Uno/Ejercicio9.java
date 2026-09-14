@@ -5,7 +5,7 @@ public class Ejercicio9{
 
     //antes de crar el for creamos los arreglos y los rangos maximo y minimo
         int[] a= new int[10];
-        int max = 20;
+        int max = 15;
         int min = 1;
         int h;
         int cont = 0; //cont es contador profe
@@ -14,12 +14,13 @@ public class Ejercicio9{
      //tenia un error porque no hice el for para el arreglo de a
 
     for (int i = 0; i< a.length; i++){
-        a[i]= (int)(Math.random()*(max- min +))+min;
+        a[i]= (int)(Math.random()*(max- min +1))+min;
     }
       //vamos a crear el for 
 
       for (int i= 0; i<a.length; i++){
         a[i]= (int)(Math.random()*(max-min+1))+min;
+            System.out.println("a["+i+"]="+a[i]); //para mirar los numeros que el agregue en este arreglo y confirmar si si da
       
       }  
       //tambien hicimos de forma random el generador del nimero que se va aa buscar
@@ -33,6 +34,6 @@ public class Ejercicio9{
         }
         //los Sysout para imprimir  
         System.out.println("El número buscado es:"+ h);
-        System.out.println("Se repite "+cont+ "de veces");
+        System.out.println("Se repite "+cont+ "veces");
     }
 }
