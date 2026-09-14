@@ -4,7 +4,7 @@ public class Ejercicio13 {
     public static void main(String[]args){
 
     //crear el arreglo de a
-    int []a =new int[a.length];
+    int []a =new int[10];
 
     //crreamos el arreglo de los mayores y menores
     int[ ]mayores = new int[a.length];
@@ -26,9 +26,31 @@ public class Ejercicio13 {
     for (int i = 0; i < a.length; i++){
         suma = suma + a[i];
     }
-    //calular la media 
-    doduble media = (double)suma /a.length;
+    //para calccular la media 
+    double media = (double)suma /a.length;
+
     System.out.println("La media es:"+ media);
+
+    // creamos los contadores
+    int m = 0;
+    int n = 0;
+
+    // ahora su creamos el if y las condiciones para separar  los mayores y menores
+
+    for (int i =0; i<a.length; i++){
+
+        if (a[i]>media){
+            mayores[m]=a[i];m++;
+        }
+        if (a[i] > media){
+            menores[n] = a[i]; n++;
+        }
+    }
+    System.out.println("Menores que la media:");
+
+    for(int i = 0; i< n; i++){
+        System.out.println("menores["+i+"]="+menores[i]);
+    }
 
     }
 
