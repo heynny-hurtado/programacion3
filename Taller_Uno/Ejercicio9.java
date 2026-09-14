@@ -1,3 +1,5 @@
+//elimine el ejercicio 9 porque do podia darle al run lo copie y pegue
+
 public class Ejercicio9{
     public static void main(String[]args){
 
@@ -10,7 +12,7 @@ public class Ejercicio9{
      
       //vamos a crear el for 
 
-      for (unt i= 0; i<a.length; i++){
+      for (int i= 0; i<a.length; i++){
         a[i]= (int)(Math.random()*(max-min+1))+min;
       
       }  
@@ -19,9 +21,12 @@ public class Ejercicio9{
 
         //el for para contar las repeticiones 
         for(int i =0; i< a.length;i ++){
-            it(a[i]==h){
+            if(a[i]==h){
                 cont++;
             }
         }
+        //los Sysout para imprimir  
+        System.out.println("El número buscado es:"+ h);
+        System.out.println("Se repite "+cont+ "de veces");
     }
 }
