@@ -17,7 +17,7 @@ public  class Ejercicio7{
     int ni= 0;
 
     //queremos hacer el for para los pares pero debemos agregar la condicion
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < a.length; i++) {
          //como si escogieramos un numero y vieramos cuantas veces se puede dividir ese numero
          if(a[i]%2 ==0){  //para dividir un numero en  2 partes y que no sobre un valor (si el numero es par)
             pares[np]=a[i];
