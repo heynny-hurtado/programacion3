@@ -16,7 +16,8 @@ public class Ejercicio17 {
             for(int j=0;j<m[i].length;j++){
 
             }
-            
+            //suma de las filas 
+            System.out.println("m["+i+"]["+j+"]="+m[i][j]);
         }
     }
 
