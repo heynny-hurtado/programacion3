@@ -68,6 +68,7 @@ public class Ejercicio22 {
 
                 }
             }
+            //imprimimos y ya
             System.out.println("El mayor es ="+mayor);
             System.out.println("su posición  es =["+fMayor+"]["+cMayor+"]");
 
