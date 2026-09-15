@@ -26,19 +26,20 @@ public class Ejercicio22 {
         // creamos el for para llenar
         for(int i =0; i<a.length; i++){
             for (int j = 0; j <a[i].length;j++){
-                a[i][j]= (int)(Math.random()* 100+1);
+                a[i][j]= (int)(Math.random()* 100);
     
             }
         }
 
         //mostrar la matriz
-        String  cad ="";
 
         for(int i = 0; i<a.length;i++){
             for(int j = 0; j <a[i].length;j++){
-                cad+= "|"+a[i][j]+"|";
+                System.out.ptint("|"+a[i][j]+"|");
+            
             }
-            cad+= "n";
+            System.out.println();
+        }
 
 
             // ahora si vamos a inicializa mayores y menores
@@ -78,4 +79,4 @@ public class Ejercicio22 {
 
 
     }
-}
+
