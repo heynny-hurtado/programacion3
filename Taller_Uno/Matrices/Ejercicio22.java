@@ -26,6 +26,19 @@ public class Ejercicio22 {
                 cad+= "|"+a[i][j]+"|";
             }
             cad+= "n";
+
+
+            // ahora si vamos a inicializa mayores y menores
+
+            int mayor = a[0][0];
+            int menor = a[0][0];
+
+            int fMayor= 0;
+            int cMayor = 0;
+            int fMenor = 0;
+            int cMenor = 0;
+            
+
         }
 
 
