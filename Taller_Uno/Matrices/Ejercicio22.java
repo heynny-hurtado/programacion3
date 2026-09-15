@@ -14,7 +14,7 @@ public class Ejercicio22 {
         System.out.print("Ingrese el numero de filas");
         int f = leer.nextInt() ;
 
-        System.out.print("Ingrese el numero de columnas")
+        System.out.print("Ingrese el numero de columnas");
         int c = leer.nextInt();
 
 
@@ -35,7 +35,7 @@ public class Ejercicio22 {
 
         for(int i = 0; i<a.length;i++){
             for(int j = 0; j <a[i].length;j++){
-                System.out.ptint("|"+a[i][j]+"|");
+                System.out.print("|"+a[i][j]+"|");
             
             }
             System.out.println();
@@ -56,12 +56,13 @@ public class Ejercicio22 {
             for (int i = 0 ; i<a.length; i ++){
                 for (int j = 0;j<a[i].length; j++){
                     if (a[i][j]> mayor){
+                        mayor = a[i][j];
                         fMayor = i;
                         cMayor = j;
                     }
                     if(a[i][j]<menor){
                         menor= a[i][j];
-                        fMayor = i;
+                        fMenor = i;
                         cMenor = j;
                     }
 
