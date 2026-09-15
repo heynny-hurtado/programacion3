@@ -25,6 +25,22 @@ public class Ejercicio21 {
             }
             System.out.println();
         }
+        //profe aqui reciclamos codigo
+        for (int i = 0; i<a.length;i++){
 
+            int sumaF = 0;
+
+            for(int j = 0;j <a[i].length; j++){
+                sumaF = sumaF + a[i][j];
+
+            }
+            b[i]=sumaF;
+        }
+        //imprimimos 
+        System.out.println("El vector B");
+
+        for(int i = 0; i <b.length; i++){
+            System.out.println("b["+i+"]="+b[i]);
+        }
     }
 }
