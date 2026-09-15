@@ -1,10 +1,23 @@
 package Matrices;
+import java.util.Scanner;
 
 import java.io.StringReader;
 
 public class Ejercicio22 {
     
     public static void main (String[]args){
+
+        // el ejercicio dice que es para cualquier matriz por ende su dimencion debe ser dada 
+
+        Scanner leer = new Scanner(System.in);
+
+        System.out.print("Ingrese el numero de filas");
+        int f = leer.nextInt() ;
+
+        System.out.print("Ingrese el numero de columnas")
+        int c = leer.nextInt();
+
+
 
         int [][]a = new int [f][c];
 
@@ -53,10 +66,11 @@ public class Ejercicio22 {
 
                 }
             }
-            System.out.println();
-            System.out.println();
-            System.out.println();
-            System.out.println();
+            System.out.println("El mayor es ="+mayor);
+            System.out.println("su posición  es =["+fMayor+"]["+cMayor+"]");
+
+            System.out.println("El menor es = "+menor);
+            System.out.println("su posición es = ["+fMenor+"]["+cMenor+"]");
 
         }
 
