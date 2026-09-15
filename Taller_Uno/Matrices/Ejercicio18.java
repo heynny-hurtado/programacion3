@@ -24,9 +24,10 @@ public class Ejercicio18 {
         for (int i =0; i <m.length; i++){
 
             for(int j = 0; j<m[i].length; j++){
-                //para que no salte a la siguiente linea sino que siga en la misma, toco investigar profe
+                //para que no salte a la siguiente linea sino que siga en la misma, toco investigar profe pero bueno
                 System.out.print(m[i][j]+"\t" );
             }
+            System.out.println();
         }
 
     }
