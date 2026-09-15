@@ -3,10 +3,10 @@ package Matrices;
 public class Ejercicio19 {
     public static void main(String[]args){
 
-      //creamos la matris 
+      //creamos la matriz 
       int [][]m = new int [6][6]; 
 
-      //vamso a crear los for para recorrer las filas y el de recorrer las columnas
+      //vamos a crear los for para recorrer las filas y el de recorrer las columnas
       for (int i = 0; i <m.length; i++){
 
         for(int j = 0; j<m[i].length;j++){
