@@ -70,3 +70,4 @@ public class MenuPrincipal {
         } while (opcion != 4);
     }
 }
+//comenzamos a trabajar desde visual studio por problemas en github
