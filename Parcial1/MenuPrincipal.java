@@ -8,12 +8,12 @@ public class MenuPrincipal {
 
         Scanner entrada = new Scanner(System.in);
 
-        // Crear un objetos Peliculas
-        Peliculas pelicula = new Peliculas();
+        // Crear un objetos Peliculas- pero ahora con arreglos
+        Peliculas[] peliculas = new Peliculas[10];
         int opcion;
+        int cpeliculas = 0;
 
-        // creamos el do while para que el menu se repita hasta que el usuario decida
-        // salir
+        // creamos el do while para que el menu se repita hasta que el usuario decida salir
 
         do {
             System.out.println("===========CINEMASTAR===============");
@@ -28,27 +28,44 @@ public class MenuPrincipal {
             switch (opcion) { // creamos el switch para que el usuario pueda elegir la opcion que desee
 
                 case 1: // cramos el caso uno para la creacion de las peliculas
-                    entrada.nextLine();
-                    // hicimemos los printin g para que el usuario pueda ingresar los datos de la
-                    // pelicula
+                    int opPeliculas;
 
-                    System.out.print("Ingrese el nombre de la pelicula: ");
-                    String nombre = entrada.nextLine();
+                    do{
+                        System.out.println("===========MENU PELICULAS===============");
+                        System.out.println("1. Crear pelicula");
+                        System.out.println("2. Eliminar pelicula");
+                        System.out.println("3. Editar pelicula");
+                        System.out.println("4. Ver peliculas");
+                        System.out.println("5. Salir");
+                        System.out.println("Ingrese una opcion: ");
+                        opPeliculas = entrada.nextInt();
 
-                    System.out.print("Ingrese el idioma de la pelicula: ");
-                    String idioma = entrada.nextLine();
+                        switch (opPeliculas) {
+                            case 1:
+                                entrada.nextLine();
 
-                    System.out.print("Ingrese el tipo de la pelicula: ");
-                    String tipo = entrada.nextLine();
+                                System.out.println("Ingrese el nombre de la película: ");
+                                String nombre = entrada.nextLine();
 
-                    System.out.print("Ingrese la duracion de la pelicula (en minutos): ");
-                    int duracion = entrada.nextInt();
+                                break;
+                            case 2:
+                                // Lógica para eliminar película
+                                break;
+                            case 3:
+                                // Lógica para editar película
+                                break;
+                            case 4:
+                                // Lógica para ver películas
+                                break;
+                            case 5:
+                                System.out.println("Saliendo del menú de películas...");
+                                break;
+                            default:
+                                System.out.println("Opción inválida. Intente nuevamente.");
+                        }
+                    } while (opPeliculas != 5);
+                    // menu para crear, eliminar, editar o ver  las peliculas disponibles
 
-                    pelicula.setNombre(nombre);
-                    pelicula.setIdioma(idioma);
-                    pelicula.setTipo(tipo);
-                    pelicula.setDuracion(duracion);
-                    pelicula.mostrarDatos();
 
                     break;
 
