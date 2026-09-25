@@ -15,7 +15,7 @@ public class Funciones{
         this.hora = hora;
     }
 
-
+    //creamos los get y los set de los attributos de la clase
     public Peliculas getPelicula() {
         return pelicula;
     }
