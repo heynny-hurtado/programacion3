@@ -12,7 +12,7 @@ public class MenuPrincipal {
         Peliculas[] peliculas = new Peliculas[10];
         Funciones[][] funciones = new Funciones[3][3];
         int opcion;
-        int cpeliculas = 0;
+        int cPeliculas = 0;
 
         // creamos el do while para que el menu se repita hasta que el usuario decida salir
 
@@ -29,20 +29,39 @@ public class MenuPrincipal {
             switch (opcion) { // creamos el switch para que el usuario pueda elegir la opcion que desee
 
                 case 1: //lo hicimos primero de este modo para confirmar que funcionara
-                    System.out.println("Ingrese el nombre de la pelicula: ");
-                    String nombre = entrada.next();
-                    System.out.println("Ingrese el idioma de la pelicula: ");
-                    String idioma = entrada.next();
-                    System.out.println("Ingrese el tipo de la pelicula: ");
-                    String tipo = entrada.next();
-                    System.out.println("Ingrese la duracion de la pelicula: ");
-                    int duracion = entrada.nextInt();
+                    int opcionPeliculas;
 
-                    peliculas[cpeliculas] = new Peliculas(nombre, idioma, tipo, duracion);
-                    cpeliculas++;
+                    do{
 
-                    System.out.println("Pelicula creada exitosamente");
+                        System.out.println("===========MENU DE PELICULAS===============");
+                        System.out.println("1. Mostrar Peliculas");
+                        System.out.println("2. Añadir peliculas");
+                        System.out.println("3. Regresar");
+                        System.out.println("Ingresa una opcion");
 
+                        opcionPeliculas = entrada.nextInt();
+
+                        switch (opcionPeliculas) {
+                            case 1:
+                                if(cPeliculas == 0){
+                                System.out.println("No hay peliculas registradas");
+                                }else{
+                                    for(int i = 0; i<cPeliculas; i++){
+                                        System.out.println("pelicula"+(i + 1));
+                                        peliculas[i].mostrarDatos();
+                                    }
+                                }
+                                break;
+                            case 2:
+                                break;
+                            case 3:
+                                break;
+
+                            default:
+                                break;
+                        }
+
+                    }while (opcionPeliculas !=3);
                     break;
 
                 case 2:
