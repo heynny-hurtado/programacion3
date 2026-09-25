@@ -52,12 +52,31 @@ public class MenuPrincipal {
                                     }
                                 }
                                 break;
+                                //ahora si agregamos lo que teniamos de crear peliculas
                             case 2:
+                                System.out.println("Ingresa el nombre de la pelicula");
+                                String nombre = entrada.next();
+
+                                System.out.println("Ingresa el idioma de la pelicula");
+                                String idioma = entrada.next();
+
+                                System.out.println("Ingresa el tipo de pelicula");
+                                String tipo = entrada.next();
+
+                                System.out.println("Ingresa la duracion de la pelicula");
+                                int duracion = entrada.nextInt();
+
+                                peliculas[cPeliculas]= new Peliculas(nombre, idioma, tipo, duracion);
+
+                                cPeliculas++;
+
+                                System.out.println("pelicula creada con exito");
                                 break;
                             case 3:
                                 break;
 
                             default:
+                                System.out.println("Opcion no valida");
                                 break;
                         }
 
