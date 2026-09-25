@@ -10,6 +10,7 @@ public class MenuPrincipal {
 
         // Crear un objetos Peliculas- pero ahora con arreglos
         Peliculas[] peliculas = new Peliculas[10];
+        Funciones[][] funciones = new Funciones[3][3];
         int opcion;
         int cpeliculas = 0;
 
@@ -17,9 +18,9 @@ public class MenuPrincipal {
 
         do {
             System.out.println("===========CINEMASTAR===============");
-            System.out.println("1. crear peliculas");
-            System.out.println("2. asignar funciones");
-            System.out.println("3. Venter entradas");
+            System.out.println("1. Acceso al menu de creacion de  peliculas");
+            System.out.println("2. Acesso al menu de funciones");
+            System.out.println("3. Acceso al menu de entradas");
             System.out.println("4. salir");
             System.out.println("ingrese una opcion: ");
 
@@ -27,7 +28,7 @@ public class MenuPrincipal {
 
             switch (opcion) { // creamos el switch para que el usuario pueda elegir la opcion que desee
 
-                case 1:
+                case 1: //lo hicimos primero de este modo para confirmar que funcionara
                     System.out.println("Ingrese el nombre de la pelicula: ");
                     String nombre = entrada.next();
                     System.out.println("Ingrese el idioma de la pelicula: ");
