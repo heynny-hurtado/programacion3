@@ -18,7 +18,7 @@ public class MenuPrincipal {
         do {
             System.out.println("===========CINEMASTAR===============");
             System.out.println("1. crear peliculas");
-            System.out.println("2. asignar funcions");
+            System.out.println("2. asignar funciones");
             System.out.println("3. Venter entradas");
             System.out.println("4. salir");
             System.out.println("ingrese una opcion: ");
@@ -27,45 +27,20 @@ public class MenuPrincipal {
 
             switch (opcion) { // creamos el switch para que el usuario pueda elegir la opcion que desee
 
-                case 1: // cramos el caso uno para la creacion de las peliculas
-                    int opPeliculas;
+                case 1:
+                    System.out.println("Ingrese el nombre de la pelicula: ");
+                    String nombre = entrada.next();
+                    System.out.println("Ingrese el idioma de la pelicula: ");
+                    String idioma = entrada.next();
+                    System.out.println("Ingrese el tipo de la pelicula: ");
+                    String tipo = entrada.next();
+                    System.out.println("Ingrese la duracion de la pelicula: ");
+                    int duracion = entrada.nextInt();
 
-                    do{
-                        System.out.println("===========MENU PELICULAS===============");
-                        System.out.println("1. Crear pelicula");
-                        System.out.println("2. Eliminar pelicula");
-                        System.out.println("3. Editar pelicula");
-                        System.out.println("4. Ver peliculas");
-                        System.out.println("5. Salir");
-                        System.out.println("Ingrese una opcion: ");
-                        opPeliculas = entrada.nextInt();
+                    peliculas[cpeliculas] = new Peliculas(nombre, idioma, tipo, duracion);
+                    cpeliculas++;
 
-                        switch (opPeliculas) {
-                            case 1:
-                                entrada.nextLine();
-
-                                System.out.println("Ingrese el nombre de la película: ");
-                                String nombre = entrada.nextLine();
-
-                                break;
-                            case 2:
-                                // Lógica para eliminar película
-                                break;
-                            case 3:
-                                // Lógica para editar película
-                                break;
-                            case 4:
-                                // Lógica para ver películas
-                                break;
-                            case 5:
-                                System.out.println("Saliendo del menú de películas...");
-                                break;
-                            default:
-                                System.out.println("Opción inválida. Intente nuevamente.");
-                        }
-                    } while (opPeliculas != 5);
-                    // menu para crear, eliminar, editar o ver  las peliculas disponibles
-
+                    System.out.println("Pelicula creada exitosamente");
 
                     break;
 

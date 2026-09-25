@@ -9,9 +9,9 @@ public class Peliculas {
     public Peliculas() {
     }
 
-    public Peliculas(String nombre, String idoma, String tipo, int duracion) {
+    public Peliculas(String nombre, String idioma, String tipo, int duracion) {
         this.nombre = nombre;
-        this.idioma = idoma;
+        this.idioma = idioma;
         this.tipo = tipo;
         this.duracion = duracion;
 
