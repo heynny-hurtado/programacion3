@@ -25,6 +25,8 @@ public class MenuPrincipal {
             System.out.println("ingrese una opcion: ");
 
             opcion = entrada.nextInt();
+            entrada.nextLine();
+
 
             switch (opcion) { // creamos el switch para que el usuario pueda elegir la opcion que desee
 
@@ -40,6 +42,7 @@ public class MenuPrincipal {
                         System.out.println("Ingresa una opcion");
 
                         opcionPeliculas = entrada.nextInt();
+                        entrada.nextLine();
 
                         switch (opcionPeliculas) {
                             case 1:
@@ -65,6 +68,7 @@ public class MenuPrincipal {
 
                                 System.out.println("Ingresa la duracion de la pelicula");
                                 int duracion = entrada.nextInt();
+                                entrada.nextLine();
 
                                 peliculas[cPeliculas]= new Peliculas(nombre, idioma, tipo, duracion);
 
