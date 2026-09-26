@@ -105,9 +105,35 @@ public class MenuPrincipal {
                     //Aqui lo que hacemos es  validar si el usuario dio un numero permitido entre el 1 y 3.
                     if (numSala < 1 || numSala > 3) {
                         System.out.println("Numero de la sala no valida.");
-                        
+                        break;
                     }
 
+                    //Creamos como el menu para solicitar en que horario quiere a funcion
+                    System.out.println("Selecciona el horario deseado:");
+                    System.out.println("1) 14:00 a 16:30");
+                    System.out.println("2) 16:30 a 19:00");
+                    System.out.println("3) 19:00 a 21:00");
+                    System.out.println("Ingrese opcion de horario 1-3: ");
+                    int numHorario = entrada.nextInt();
+
+                    if (numHorario < 1 || numHorario > 3) {
+                        System.out.println("Opcion no valida");
+                        break;
+                        
+                    }
+                    
+                    /* Aqui lo que voy a hacer es no permitir que coloque
+                    una pelicula en un horario en la que ya hay otra pelicula
+                    entonces primero  toca restarle 1 a numSala y NumHorario, con la
+                    finalidad de que se dapte a los numeros de nuetra matriz*/
+                    if (funciones[numSala - 1][numHorario - 1] != null) {
+                        //si la casilla de la matriz no es null o vacia, esto nos da a entender 
+                        // que ya tenemos una pelicula con ese horario estipulado
+                        System.out.println("Ya existe una pelicula programada en la sala  " + numSala + "para ese horario" );
+                        
+                        break;
+                        
+                    }
                 
                     break;
 
