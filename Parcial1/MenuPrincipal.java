@@ -84,7 +84,31 @@ public class MenuPrincipal {
                     break;
 
                 case 2:
-                    System.out.println();
+                    System.out.println("=======Menu Funciones=======");
+
+                    //Aqui basicamente lo que busco con este if, es verificar si el 
+                    //usuario ya registro al menos una pelicula.
+                    if (cPeliculas ==0) {
+                        System.out.println("Primero debes registras al menos una pelicula");
+                        break;
+                        
+                    }
+
+
+                    //Menu para seleccionar la sala deseada 
+                    System.out.println("Selecciona tu sala:");
+                    System.out.println("1) Sala 1 (General y Preferencial |No Disponibilidad 3D|)");
+                    System.out.println("2) Sala 2 (General y Preferencial |No Disponibilidad 3D|)");
+                    System.out.println("3) Sala 3 (General y Preferencial |Solo Disponibilidad 3D|)");
+                    System.out.println("Ingresa el numero de la sala 1-3: ");
+                    int numSala= entrada.nextInt();
+                    //Aqui lo que hacemos es  validar si el usuario dio un numero permitido entre el 1 y 3.
+                    if (numSala < 1 || numSala > 3) {
+                        System.out.println("Numero de la sala no valida.");
+                        
+                    }
+
+                
                     break;
 
                 case 3:
