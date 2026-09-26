@@ -130,11 +130,31 @@ public class MenuPrincipal {
                         //si la casilla de la matriz no es null o vacia, esto nos da a entender 
                         // que ya tenemos una pelicula con ese horario estipulado
                         System.out.println("Ya existe una pelicula programada en la sala  " + numSala + "para ese horario" );
-                        
+
                         break;
                         
                     }
-                
+
+                    //Aqui mostraremos la pelicula registrada para seleccionar cual asigar
+                    System.out.println("Catalogo de peliculas");
+                    for (int i = 0; i < cPeliculas; i++) {
+                        System.out.println((i + 1) + ". " + peliculas[i].getNombre() + " (" + peliculas[i].getTipo() + ")");
+                        // mostramos el numer ode la pelicula junto al nombre y el formato
+
+                        
+                    }
+                    System.out.println("Seleccione el numero de la pelicula a asignar: ");
+                    int peSelec = entrada.nextInt(); 
+                    
+                    if (peSelec < 1 || peSelec >3) {
+                        System.out.println("Opcion no valida");
+                        break;
+                        
+                    }
+
+                    Peliculas peliculasSeleccionada= peliculas[peSelec - 1];
+                    //basicamente obtenemos el objeto peliculas que nos de el usuario y lo 
+                    // guardamos en una variable de tipo auxiliar
                     break;
 
                 case 3:
