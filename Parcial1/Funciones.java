@@ -9,8 +9,8 @@ public class Funciones{
     private String hora;
 
 
-    public String obtenerHorario(int opionHora){
-        switch (opionHora) {
+    public String obtenerHorario(int opcionHora){
+        switch (opcionHora) {
             case 1: return "14:00 - 16:30";
             case 2: return "16:30 - 19:00";
             case 3: return "19:00 - 21:00";

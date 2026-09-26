@@ -155,6 +155,42 @@ public class MenuPrincipal {
                     Peliculas peliculasSeleccionada= peliculas[peSelec - 1];
                     //basicamente obtenemos el objeto peliculas que nos de el usuario y lo 
                     // guardamos en una variable de tipo auxiliar
+                   
+                    if ((numSala == 1 || numSala == 2) && peliculasSeleccionada.getTipo().equalsIgnoreCase("3D")) {
+                        System.out.println("Las Salas 1 y 2 no pueden proyectar pelicuals en 3D...");
+                        /* Aqui lo que hacemos es validar que las salas 1 y 2 no permitan peliculas 3D*/
+                       break;
+                    }
+
+                    if (numSala == 3 && !peliculasSeleccionada.getTipo().equalsIgnoreCase("3D")) {
+                        System.out.println("La sala 3 solo puede proyectar peliculas en 3D...");
+                        // lo mismo que antes validamos que la sala 3 solo permita formato 3D
+
+                        break;
+                    }
+                   
+                    //Aqui el horario que era tipo numerico lo convertimos a un tipo texto para guardala
+                    String opcHora= "";
+                    if (numHorario ==1) {
+                        opcHora="14:00 - 16:30";
+
+                        
+                    }
+                    if (numHorario == 2) {
+                        opcHora="16:30 - 19:00";
+                        
+                    }
+                    if (numHorario == 3) {
+                        opcHora="19:00 - 21:00";
+                        
+                    }
+
+                    funciones[numSala - 1][numHorario - 1] = new Funciones(peliculasSeleccionada, numSala, opcHora);
+                    //guardamos el objeto en la nuestra matriz de funciones
+
+                    System.out.println("===Funcion Asignada Con Exito===");
+                    System.out.println("Pelicula: " + peliculasSeleccionada.getNombre() + " | Sala " + numSala + "| Horario: " + opcHora);
+                   
                     break;
 
                 case 3:
