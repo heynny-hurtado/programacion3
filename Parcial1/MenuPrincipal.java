@@ -18,9 +18,9 @@ public class MenuPrincipal {
 
         do {
             System.out.println("===========CINEMASTAR===============");
-            System.out.println("1. Acceso al menu de creacion de  peliculas");
-            System.out.println("2. Acesso al menu de funciones");
-            System.out.println("3. Acceso al menu de entradas");
+            System.out.println("1. menu de creacion de  peliculas");
+            System.out.println("2. menu de funciones");
+            System.out.println("3. menu de entradas");
             System.out.println("4. salir");
             System.out.println("ingrese una opcion: ");
 
