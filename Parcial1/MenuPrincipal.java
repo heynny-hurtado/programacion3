@@ -23,6 +23,7 @@ public class MenuPrincipal {
             System.out.println("2. menu de funciones");
             System.out.println("3. menu de entradas");
             System.out.println("4. salir");
+            System.out.println("====================================");
             System.out.println("ingrese una opcion: ");
 
             opcion = entrada.nextInt();
@@ -39,6 +40,7 @@ public class MenuPrincipal {
                         System.out.println("1. Mostrar Peliculas");
                         System.out.println("2. Añadir peliculas");
                         System.out.println("3. Regresar");
+                        System.out.println("=========================================");
                         System.out.println("Ingresa una opcion");
 
                         opcionPeliculas = entrada.nextInt();
@@ -96,6 +98,7 @@ public class MenuPrincipal {
                         System.out.println("1. crear una funcion");
                         System.out.println("2. mostrar funciones disponibles");
                         System.out.println("3. Regresar");
+                        System.out.println("==============================");
                         System.out.println("Ingrese una opcion");
 
                         opcionFunciones = entrada.nextInt();
@@ -246,6 +249,34 @@ public class MenuPrincipal {
                     break;
 
                 case 3:
+                    int opcionEntradas;
+
+                    do{
+                        System.out.println("===========Menu Entradas==========");
+                        System.out.println("1. Comprar Entradas");
+                        System.out.println("2. Cancelar Entrada");
+                        System.out.println("3.Regresas");
+                        System.out.println("===================================");
+
+
+                        System.out.println("Ingrese una opcion");
+                        opcionEntradas = entrada.nextInt();
+
+                        switch (opcionEntradas){
+                            case 1:
+                                break;
+
+                            case 2:
+                                break;
+
+                            case 3:
+                                break;
+
+                            default:
+                                System.out.println();
+                        }
+
+                    }while(opcionEntradas != 3);
 
                     break;
 
