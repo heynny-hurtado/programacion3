@@ -88,23 +88,36 @@ public class MenuPrincipal {
                     break;
 
                 case 2:
-                    System.out.println("=======Menu Funciones=======");
+                    int opcionFunciones;
 
-                    //Aqui basicamente lo que busco con este if, es verificar si el
-                    //usuario ya registro al menos una pelicula.
-                    if (cPeliculas ==0) {
-                        System.out.println("Primero debes registras al menos una pelicula");
-                        break;
+                    do{
 
-                    }
+                    System.out.println("=======MENU FUNCIONES=======");
+                    System.out.println("1. crear una funcion");
+                    System.out.println("2. mostrar funciones disponibles");
+                    System.out.println("3. Regresar");
+                    System.out.println("Ingrese una opcion");
 
+                    opcionFunciones = entrada.nextInt();
+                    entrada.nextLine();
 
+                    switch(opcionFunciones){
+
+                        case 1:
+                            //Aqui basicamente lo que busco con este if, es verificar si el
+                            //usuario ya registro al menos una pelicula.
+                            if (cPeliculas ==0) {
+                                System.out.println("Primero debes registras al menos una pelicula");
+                                break;
+
+                            }
                     //Menu para seleccionar la sala deseada
                     System.out.println("Selecciona tu sala:");
                     System.out.println("1) Sala 1 (General y Preferencial |No Disponibilidad 3D|)");
                     System.out.println("2) Sala 2 (General y Preferencial |No Disponibilidad 3D|)");
                     System.out.println("3) Sala 3 (General y Preferencial |Solo Disponibilidad 3D|)");
                     System.out.println("Ingresa el numero de la sala 1-3: ");
+
                     int numSala= entrada.nextInt();
                     //Aqui lo que hacemos es  validar si el usuario dio un numero permitido entre el 1 y 3.
                     if (numSala < 1 || numSala > 3) {
@@ -196,9 +209,35 @@ public class MenuPrincipal {
                     System.out.println("Pelicula: " + peliculasSeleccionada.getNombre() + " | Sala " + numSala + "| Horario: " + opcHora);
 
                     break;
+                    //este nos permite ver que funcion hay ya creada
+                    case 2:
+                        System.out.println("mostrar funciones");
+
+                        for(int i = 0; i < funciones.length; i++){
+                            for(int j = 0; j< funciones[i].length;j++){
+                                if(funciones[i][j]!= null){
+
+                                    System.out.println("funcion"+(i+1));
+                                    funciones[i][j].mostrarDatos();
+                                }
+                            }
+                        }
+                        break;
+
+                    case 3:
+                    System.out.println("volver al menu principal");
+                    break;
+
+                    default:
+                        System.out.println("opcion no valida intente de nuevo");
+                        break;
+                }
+
+                }while (opcionFunciones !=3);
+                break;
 
                 case 3:
-                    System.out.println();
+                    
                     break;
 
                 case 4:
@@ -211,3 +250,4 @@ public class MenuPrincipal {
         } while (opcion != 4);
     }
 }
+
