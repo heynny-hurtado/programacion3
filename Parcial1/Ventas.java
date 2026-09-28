@@ -19,9 +19,24 @@ public class Ventas {
         this.asientosSelec = new String[96]; // recerba de espacio para guardar las sillas
     }
 
-    public void agregatAsiento(String asiento){
-        asientosSelec[cantEntradas] = asiento;
-        cantEntradas++;
+    //Realizamos los gets
+
+    public Funciones getFuncion(){
+        return funcion;
     }
+
+    public int getCantEntradas(){
+        return cantEntradas;
+    }
+
+    public int  getTotal(){
+        return total;
+    }
+
+    public String[] getAsientoSelec(){
+        return asientosSelec;
+    }
+
+
 
 }
