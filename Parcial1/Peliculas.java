@@ -55,6 +55,6 @@ public class Peliculas {
         System.out.println("Tipo: " + tipo);
         System.out.println("Duración: " + duracion + " minutos");
     }
-    //clonacion del archivo a visual code  por problemas con el codespace 
+    // clonacion del archivo a visual code por problemas con el codespace
 
 }

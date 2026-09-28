@@ -1,60 +1,50 @@
 package Parcial1;
 
-public class Funciones{
+public class Funciones {
 
-    //crearemos los attributos de esta clase
+    // crearemos los attributos de esta clase
 
-    private  Peliculas pelicula;
+    private Peliculas pelicula;
     private String hora;
     private int numeroSala;
     private sala objetoSala;
 
-    
-
-    public  Funciones(Peliculas pelicula, int numeroSala, String hora){
+    public Funciones(Peliculas pelicula, int numeroSala, String hora) {
         this.pelicula = pelicula;
         this.numeroSala = numeroSala;
         this.hora = hora;
-       this.objetoSala = new sala(numeroSala); //Aqui ahora creamos la sala
+        this.objetoSala = new sala(numeroSala); // Aqui ahora creamos la sala
     }
-   
 
-//nuestro nuevo metodo para poder imprimir la sala desde la clase funciones
-    public void mostrarSala(){
-    if (objetoSala != null) {
-        objetoSala.mostrarSala();
-        
-    }
-}
+    // nuestro nuevo metodo para poder imprimir la sala desde la clase funciones
+    public void mostrarSala() {
+        if (objetoSala != null) {
+            objetoSala.mostrarSala();
 
-
-   
-
-
-
-
-
-    public String obtenerHorario(int opcionHora){
-        switch (opcionHora) {
-            case 1: return "14:00 - 16:30";
-            case 2: return "16:30 - 19:00";
-            case 3: return "19:00 - 21:00";
-                
-               
-        
-            default: return "Opcion no valida";
-                
         }
     }
 
+    public String obtenerHorario(int opcionHora) {
+        switch (opcionHora) {
+            case 1:
+                return "14:00 - 16:30";
+            case 2:
+                return "16:30 - 19:00";
+            case 3:
+                return "19:00 - 21:00";
 
+            default:
+                return "Opcion no valida";
 
-    //creamos los get y los set de los attributos de la clase
+        }
+    }
 
-    public sala getObjSala(){
+    // creamos los get y los set de los attributos de la clase
+
+    public sala getObjSala() {
         return objetoSala;
     }
-    
+
     public Peliculas getPelicula() {
         return pelicula;
     }
@@ -79,16 +69,15 @@ public class Funciones{
         this.hora = hora;
     }
 
-
-    //metodo que nos permite ver la informacion de la función
+    // metodo que nos permite ver la informacion de la función
     public void mostrarDatos() {
         System.out.println("Pelicula: " + pelicula.getNombre());
         System.out.println("Sala: " + numeroSala);
         System.out.println("Hora: " + hora);
         if (pelicula != null) {
             pelicula.mostrarDatos();
-    }else{
-        System.out.println("No hay pelicula asignada a esta funcion");
+        } else {
+            System.out.println("No hay pelicula asignada a esta funcion");
+        }
     }
-}
 }
