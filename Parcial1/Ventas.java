@@ -37,6 +37,11 @@ public class Ventas {
         return asientosSelec;
     }
 
+        public void guardarAsiento(String asiento){
+            asientosSelec[cantEntradas] = asiento;
+
+            cantEntradas++;
+        }
 
 
 }
