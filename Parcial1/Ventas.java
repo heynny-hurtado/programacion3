@@ -43,5 +43,19 @@ public class Ventas {
             cantEntradas++;
         }
 
+    //ahora necesitamos una funcion
+    public void calcularPrecio(int fila){
+        // el valor para la sala 3 es de  10000
+        if(funcion.getNumeroSala()==3){
+            total = total+10000;
+        }else{
+            if(fila<=6){ //aquí estamos aclarando que  hasta la fila  f es general
+                total = total +8000;
+            }else{ //aplica el valor para preferencial
+                total = total +12000;
+            }
+        }
+    }
+
 
 }
