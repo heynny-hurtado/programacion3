@@ -290,19 +290,30 @@ public class MenuPrincipal {
                                     venta.getFuncion().mostrarSala();
 
                                     // vamos a seleccionar un asiento
-                                    System.out.println("Ingrese  numero de  fila que desea");
-                                    int fila = entrada.nextInt();
-                                    System.out.println("Ingrese  el numero del asiento");
-                                    int columna = entrada.nextInt();
 
-                                    if (fila < 1 || fila >= venta.getFuncion().getObjSala().getsalaAsientos().length) {
+                                    System.out.println("¿Cuantas entradas desea?");
+                                    int cantidad = entrada.nextInt();
 
-                                        System.out.println("Numero de fila no valido");
-                                    } else if (columna < 1 || columna > 12) {
-                                        System.out.println("Numero de asiento incorrecto");
-                                    } else {
-                                        venta.selecAsiento(fila, columna);
+                                    for (int i = 1; i <= cantidad; i++) {
+
+                                        System.out.println("====Entrada." + i + "====");
+
+                                        System.out.println("Ingrese  numero de  fila que desea");
+                                        int fila = entrada.nextInt();
+                                        System.out.println("Ingrese  el numero del asiento");
+                                        int columna = entrada.nextInt();
+
+                                        if (fila < 1
+                                                || fila >= venta.getFuncion().getObjSala().getsalaAsientos().length) {
+
+                                            System.out.println("Numero de fila no valido");
+                                        } else if (columna < 1 || columna > 12) {
+                                            System.out.println("Numero de asiento incorrecto");
+                                        } else {
+                                            venta.selecAsiento(fila, columna);
+                                        }
                                     }
+
                                     System.out.println("================Valor a pagar=====================");
                                     System.out.println("cantidad de entradas: " + venta.getCantEntradas());
                                     System.out.println("total a pagar" + venta.getTotal());
