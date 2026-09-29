@@ -57,12 +57,16 @@ public class Ventas {
         }
     }
     //diseño de ocupar un asiento
-    public void ocuparAsiento(int fila, int columna){
+    public void selecAsiento(int fila, int columna){
 
         String[][] matriz = funcion.getObjSala().getsalaAsientos();
 
         if (matriz[fila][columna]== "_"){
             matriz[fila][columna] = "X";
+
+            String asiento = matriz[fila][0]+ columna;
+            guardarAsiento(asiento);
+            calcularPrecio(fila);
 
             System.out.println("Asiento ocupado correctamente");
         }else{

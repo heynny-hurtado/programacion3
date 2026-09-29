@@ -249,39 +249,58 @@ public class MenuPrincipal {
                 case 3:
                     int opcionEntradas;
 
-                    do{
+                    do {
                         System.out.println("===========Menu Entradas==========");
                         System.out.println("1. Comprar Entradas");
                         System.out.println("2. Cancelar Entrada");
                         System.out.println("3.Regresas");
                         System.out.println("===================================");
 
-
                         System.out.println("Ingrese una opcion");
                         opcionEntradas = entrada.nextInt();
 
-                        switch (opcionEntradas){
+                        switch (opcionEntradas) {
                             case 1:
-                                for(int i = 0; i< funciones.length; i++){
-                                    for(int j = 0; j< funciones[i].length; j++){
+                                for (int i = 0; i < funciones.length; i++) {
+                                    for (int j = 0; j < funciones[i].length; j++) {
 
-                                        if(funciones[i][j] != null){
+                                        if (funciones[i][j] != null) {
                                             funciones[i][j].mostrarDatos();
                                             System.out.println("entrada comprada con exito");
                                         }
                                     }
                                 }
 
-                                //seleccionar la función
+                                // seleccionar una función
                                 System.out.println("Ingrese  el numero de la sala ");
                                 int numSala = entrada.nextInt();
 
                                 System.out.println(" Ingrese el numero de horario que desa");
                                 int numHorario = entrada.nextInt();
+                                // guardar la funcion
 
-                                Funciones funcionSelec = funciones[numSala-1][numHorario-1];
+                                Funciones funcionSelec = funciones[numSala - 1][numHorario - 1];
+
+                                if(funcionSelec == null){
+                                    System.out.println("Esta funcion no existe ");
+                                }else{
+                                    // crear el objeto de venta
                                 Ventas venta = new Ventas(funcionSelec);
+
+                                System.out.println("========Asientos disponibles=======");
+                                venta.getFuncion().mostrarSala();
+
+                                //vamos a seleccionar un asiento
+                                System.out.println("Ingrese  numero de  fila que desea");
+                                int fila = entrada.nextInt();
+                                System.out.println("Ingrese  el numero del asiento");
+                                int columna = entrada.nextInt();
+
+
+                                venta.selecAsiento(fila, columna);
                                 break;
+                                }
+
 
                             case 2:
                                 break;
@@ -293,7 +312,7 @@ public class MenuPrincipal {
                                 System.out.println();
                         }
 
-                    }while(opcionEntradas != 3);
+                    } while (opcionEntradas != 3);
 
                     break;
 
