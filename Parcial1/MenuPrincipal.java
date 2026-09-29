@@ -192,10 +192,8 @@ public class MenuPrincipal {
                                 if (numSala == 3 && !peliculasSeleccionada.getTipo().equalsIgnoreCase("3D")) {
                                     System.out.println("La sala 3 solo puede proyectar peliculas en 3D...");
                                     // lo mismo que antes validamos que la sala 3 solo permita formato 3D
-
                                     break;
                                 }
-
                                 // Aqui el horario que era tipo numerico lo convertimos a un tipo texto para
                                 // guardala
                                 String opcHora = "";
@@ -264,6 +262,25 @@ public class MenuPrincipal {
 
                         switch (opcionEntradas){
                             case 1:
+                                for(int i = 0; i< funciones.length; i++){
+                                    for(int j = 0; j< funciones[i].length; j++){
+
+                                        if(funciones[i][j] != null){
+                                            funciones[i][j].mostrarDatos();
+                                            System.out.println("entrada comprada con exito");
+                                        }
+                                    }
+                                }
+
+                                //seleccionar la función
+                                System.out.println("Ingrese  el numero de la sala ");
+                                int numSala = entrada.nextInt();
+
+                                System.out.println(" Ingrese el numero de horario que desa");
+                                int numHorario = entrada.nextInt();
+
+                                Funciones funcionSelec = funciones[numSala-1][numHorario-1];
+                                Ventas venta = new Ventas(funcionSelec);
                                 break;
 
                             case 2:
