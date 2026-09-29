@@ -280,46 +280,46 @@ public class MenuPrincipal {
 
                                 Funciones funcionSelec = funciones[numSala - 1][numHorario - 1];
 
-                                if(funcionSelec == null){
+                                if (funcionSelec == null) {
                                     System.out.println("Esta funcion no existe ");
-                                }else{
+                                } else {
                                     // crear el objeto de venta
-                                Ventas venta = new Ventas(funcionSelec);
+                                    Ventas venta = new Ventas(funcionSelec);
 
-                                System.out.println("========Asientos disponibles=======");
-                                venta.getFuncion().mostrarSala();
+                                    System.out.println("========Asientos disponibles=======");
+                                    venta.getFuncion().mostrarSala();
 
-                                //vamos a seleccionar un asiento
-                                System.out.println("Ingrese  numero de  fila que desea");
-                                int fila = entrada.nextInt();
-                                System.out.println("Ingrese  el numero del asiento");
-                                int columna = entrada.nextInt();
+                                    // vamos a seleccionar un asiento
+                                    System.out.println("Ingrese  numero de  fila que desea");
+                                    int fila = entrada.nextInt();
+                                    System.out.println("Ingrese  el numero del asiento");
+                                    int columna = entrada.nextInt();
 
-                                if(fila< 1 || fila>=venta.getFuncion().getObjSala().getsalaAsientos().length){
+                                    if (fila < 1 || fila >= venta.getFuncion().getObjSala().getsalaAsientos().length) {
 
-                                    System.out.println("Numero de fila no valido");
-                                }else if (columna <1||columna> 12){
-                                    System.out.println("Numero de asiento incorrecto");
-                                }else{
-                                    venta.selecAsiento(fila, columna);
+                                        System.out.println("Numero de fila no valido");
+                                    } else if (columna < 1 || columna > 12) {
+                                        System.out.println("Numero de asiento incorrecto");
+                                    } else {
+                                        venta.selecAsiento(fila, columna);
+                                    }
+                                    System.out.println("================Valor a pagar=====================");
+                                    System.out.println("cantidad de entradas: " + venta.getCantEntradas());
+                                    System.out.println("total a pagar" + venta.getTotal());
+
+                                    break;
                                 }
-                                System.out.println("================Valor a pagar=====================");
-                                System.out.println("cantidad de entradas: " + venta.getCantEntradas());
-                                System.out.println("total a pagar"+ venta.getTotal());
-
-                                
-                                break;
-                                }
-
 
                             case 2:
+                                System.out.println("formato no disponible todavia");
                                 break;
 
                             case 3:
+                                System.out.println("regreso al menu Principal");
                                 break;
 
                             default:
-                                System.out.println();
+                                System.out.println("opcion incorrecta");
                         }
 
                     } while (opcionEntradas != 3);
@@ -327,10 +327,11 @@ public class MenuPrincipal {
                     break;
 
                 case 4:
+                    System.out.println("Gracias por comprar en CINEMASTAR");
                     break;
 
                 default:
-
+                    System.out.println("Opcion incorrecta");
             }
 
         } while (opcion != 4);
