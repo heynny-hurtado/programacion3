@@ -74,5 +74,17 @@ public class Ventas {
             System.out.println("este haciento Asiento ya esta ocupado por alguien mas");
         }
     }
+    //en el caso de que una persona quiera cancelar el asiento
+    public void cancelarAsiento(int fila, int columna){
+
+        String[][] matriz = funcion.getObjSala().getsalaAsientos();
+
+        if(matriz[fila][columna].equals("X")){
+            matriz[fila][columna]= "_";
+            System.out.println("Tu entrada fue  cancelada");
+        }else{
+            System.out.println("Asiento ya disponible");
+        }
+    }
 
 }
