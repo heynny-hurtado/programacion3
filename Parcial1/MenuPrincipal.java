@@ -266,7 +266,6 @@ public class MenuPrincipal {
 
                                         if (funciones[i][j] != null) {
                                             funciones[i][j].mostrarDatos();
-                                            System.out.println("entrada comprada con exito");
                                         }
                                     }
                                 }
@@ -296,8 +295,19 @@ public class MenuPrincipal {
                                 System.out.println("Ingrese  el numero del asiento");
                                 int columna = entrada.nextInt();
 
+                                if(fila< 1 || fila>=venta.getFuncion().getObjSala().getsalaAsientos().length){
 
-                                venta.selecAsiento(fila, columna);
+                                    System.out.println("Numero de fila no valido");
+                                }else if (columna <1||columna> 12){
+                                    System.out.println("Numero de asiento incorrecto");
+                                }else{
+                                    venta.selecAsiento(fila, columna);
+                                }
+                                System.out.println("================Valor a pagar=====================");
+                                System.out.println("cantidad de entradas: " + venta.getCantEntradas());
+                                System.out.println("total a pagar"+ venta.getTotal());
+
+                                
                                 break;
                                 }
 

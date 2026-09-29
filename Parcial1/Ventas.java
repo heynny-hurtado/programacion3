@@ -71,7 +71,7 @@ public class Ventas {
             System.out.println("Asiento ocupado correctamente");
         }else{
 
-            System.out.println("Asiento ocupado");
+            System.out.println("este haciento Asiento ya esta ocupado por alguien mas");
         }
     }
 
