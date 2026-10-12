@@ -48,7 +48,7 @@ public class Pilas {
     public int cantidadVideoJuegos(){
         return videoJuegos.size();
     }
-
+    //listo
     public boolean estaVacia() {
         return videoJuegos.isEmpty();
     }
