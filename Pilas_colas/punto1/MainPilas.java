@@ -12,10 +12,20 @@ public class MainPilas {
         // creamos un objeto de la clase Pilas para llamar a los metodos de la clase
         Pilas juegos = new Pilas();
 
-        in opcion;
+        int opcion;
         String juego;
-        
 
+        do{
+            System.out.println("========PILA DE VIDEOJUEGOS========");
+            System.out.println("1. Agregar un videojuego");
+            System.out.println("2. Quitar un videojuego");
+            System.out.println("3. consultar el videojuego ");
+            System.out.println("4. Buscar un videojuego");
+            System.out.println("5. Salir");
+            System.out.print("Ingrese una opción: ");
+
+            // Limpiar el buffer del scanner
+        }
 
     }
 }
