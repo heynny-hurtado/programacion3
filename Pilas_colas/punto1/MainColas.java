@@ -44,6 +44,11 @@ public class MainColas {
                     break;
 
                 case 3:
+                    if (!cola.estaVacia.isEmpty()) {
+                        System.out.println("La primera sala en la cola es: " + cola.verSalaFrente());
+                    } else {
+                        System.out.println("No hay salas en la cola.");
+                    }
                     break;
 
                 case 4:
