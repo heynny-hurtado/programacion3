@@ -48,6 +48,14 @@ public class MainPilas {
                     break;
 
                 case 4:
+                    System.out.print("Ingrese el videojuego que quieres buscar: ");
+                    juego = entrada.nextLine();
+
+                    if (juegos.buscarVideoJuego(juego)) {
+                        System.out.println("El videojuego '" + juego + "' se encuentra en la pila.");
+                    } else {
+                        System.out.println("El videojuego '" + juego + "' no se encuentra en la pila.");
+                    }
                     break;
 
                 case 5:
