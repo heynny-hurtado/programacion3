@@ -37,6 +37,7 @@ public class MainPilas {
                     break;
 
                 case 2:
+                    System.out.println( juegos.quitarJuego());
                     break;
 
                 case 3:
