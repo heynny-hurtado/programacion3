@@ -10,6 +10,15 @@ public class Pilas92 {
         Stack<Character> pila = new Stack<>();
 
         System.out.println("Ingrese una secuencia con el formato X y Y");
+        //nos permite guardar la secuencia ingresada
         String secuencia = entrada.nextLine();
+        //separamos la secuencia que ingreso
+        String[] partes = secuencia.split("&");
+
+        //nos permite guardar la primera cadena variabel X y la segunda variable Y
+        String x = partes[0];
+        String y = partes [1];
+
+
     }
 }
