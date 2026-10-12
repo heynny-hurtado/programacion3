@@ -8,7 +8,7 @@ public class MainPilas {
 
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner entrada = new Scanner(System.in);
         // creamos un objeto de la clase Pilas para llamar a los metodos de la clase
         Pilas juegos = new Pilas();
 
@@ -24,7 +24,31 @@ public class MainPilas {
             System.out.println("5. Salir");
             System.out.print("Ingrese una opción: ");
 
-            // Limpiar el buffer del scanner
+
+            opcion = entrada.nextInt();
+            entrada.nextLine(); // Limpiar el buffer
+
+            switch(opcion){
+
+                case 1:
+                    break;
+                
+                case 2:
+                    break;
+                
+                case 3:
+                    break;
+
+                case 4:
+                    break;
+                
+                case 5:
+                    System.out.println("Saliendo del programa...");
+                    break;
+                
+                    default:
+                    System.out.println("Opción inválida. Por favor, ingrese una opción válida.");
+            }
         }
 
     }
