@@ -31,10 +31,21 @@ public class Pilas93 {
                     equilibrado = false;
                     break;
                 }
-
+                //lo que hace es sacar el último carácter que se guardo
                 char apertura = pila.pop();
-                
+                //es un if para verificar el simbilo si corresponde o no a apertura
+                if((caracter == ')' && apertura != '(') ||
+                    (caracter == ']' && apertura != '[') ||
+                    (caracter == '}' && apertura != '{')){
+
+                        equilibrado = false;
+                        break;
+                    }
+
             }
         }
+        //este verifica  quedaron simbolos de apertura sin error
+    if (!pila.isEmpty()){}
     }
+    
 }
