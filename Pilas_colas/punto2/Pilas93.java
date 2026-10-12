@@ -1,5 +1,22 @@
 package Pilas_colas.punto2;
 
+import java.util.Stack;
+import java.util.Scanner;
+
 public class Pilas93 {
-    
+    public static void main(String[]args){
+
+        Scanner entrada = new Scanner(System.in);
+        Stack<Character> pila = new Stack<>();
+
+        System.out.println("Ingrese una expresion");
+        String expresion = entrada.nextLine();
+
+        boolean equilibrado = true;
+
+        //Recorre cada caracter de la expresion 
+        for (int i = 0; i < expresion.length(); i++) {
+            
+        }
+    }
 }
