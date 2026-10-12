@@ -1,3 +1,4 @@
+
 package Pilas_colas.punto1;
 
 import java.util.Scanner;
@@ -6,8 +7,8 @@ public class MainColas {
     public static void main(String[] args) {
 
         // sirve para crear un objeto de la clase Scanner y poder leer datos desde la
-        Scanner entrada = new Scanner(System.in);
         // consola Scanner entrada = new Scanner(System.in);
+        Scanner entrada = new Scanner(System.in);
         Colas cola = new Colas();
 
         int opcion;
@@ -24,7 +25,7 @@ public class MainColas {
             opcion = entrada.nextInt();
             entrada.nextLine(); // Limpiar el buffer de entrada
 
-            switch (opcion){
+            switch (opcion) {
 
                 case 1:
                     System.out.print("Ingrese el nombre de la sala: ");
@@ -36,6 +37,7 @@ public class MainColas {
 
                 case 2:
                     sala = cola.quitarSala();
+
                     if (sala != null) {
                         System.out.println("Sala quitada: " + sala);
                     } else {
@@ -44,8 +46,8 @@ public class MainColas {
                     break;
 
                 case 3:
-                    if (!cola.estaVacia.isEmpty()) {
-                        System.out.println("La primera sala en la cola es: " + cola.verSalaFrente());
+                    if (!cola.estaVacia()) {
+                        System.out.println("La primera sala en la cola es: " + cola.verSala());
                     } else {
                         System.out.println("No hay salas en la cola.");
                     }
@@ -55,9 +57,10 @@ public class MainColas {
                     System.out.println("Saliendo del programa...");
                     break;
 
-                    default:
+                default:
                     System.out.println("Opcion invalida. Por favor ingrese una opcion.");
             }
+
         } while (opcion != 4);
 
         entrada.close(); // Cerrar el objeto Scanner al finalizar el programa

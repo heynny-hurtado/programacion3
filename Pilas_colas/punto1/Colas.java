@@ -1,31 +1,36 @@
+
 package Pilas_colas.punto1;
 
 import java.util.LinkedList;
-import java.util.Queue; //este se importa para poder usar la clase Queue
+import java.util.Queue;
 
 public class Colas {
 
-    // creamos una cola de tipo String
-    private Queue<String> salasGamer;
+    // Creamos una cola para guardar las salas
+    private Queue<String> salas;
 
-    // hacemos el constructor de la clase
+    // Hacemos el constructor
     public Colas() {
-        salasGamer = new LinkedList<>();
+        salas = new LinkedList<>();
     }
 
-
-    //metodo add para agregar en este caso una sala a la cola
-    public void agregarSala(String sala) {
-        salasGamer.add(sala);
+    // El metodo add sirve para agregar una sala a la cola
+    public boolean agregarSala(String sala) {
+        return salas.add(sala);
     }
 
-    //ahora el metodo pollpara quitar una sala
+    // El metodo poll sirve para quitar la primera sala de la cola
     public String quitarSala() {
-        return salasGamer.poll();
+        return salas.poll();
     }
 
-    //metodo element para ver la sala que esta al frente de la cola
-    public String verSalaFrente() {
-        return salasGamer.element();
+    // El metodo element sirve para ver la primera sala sin quitarla
+    public String verSala() {
+        return salas.element();
+    }
+
+    // Comprobamos si la cola esta vacia
+    public boolean estaVacia() {
+        return salas.isEmpty();
     }
 }
