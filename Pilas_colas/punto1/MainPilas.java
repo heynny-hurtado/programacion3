@@ -31,25 +31,28 @@ public class MainPilas {
             switch(opcion){
 
                 case 1:
+                    System.out.print("Ingrese el nombre del videojuego: ");
+                    juego = entrada.nextLine();
+                    juegos.agregarJuego(juego);
                     break;
-                
+
                 case 2:
                     break;
-                
+
                 case 3:
                     break;
 
                 case 4:
                     break;
-                
+
                 case 5:
                     System.out.println("Saliendo del programa...");
                     break;
-                
+
                     default:
                     System.out.println("Opción inválida. Por favor, ingrese una opción válida.");
             }
-        }
+        }while(opcion != 5);
 
     }
 }
