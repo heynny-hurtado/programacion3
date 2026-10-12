@@ -14,8 +14,16 @@ public class Pilas93 {
 
         boolean equilibrado = true;
 
-        //Recorre cada caracter de la expresion 
+        //Recorre cada caracter de la expresion
         for (int i = 0; i < expresion.length(); i++) {
+
+            char caracter = expresion.charAt(i);
+
+            //este que vamos a hacer nos permite guardar los simbolos
+            if(caracter == '('|| caracter == '[' || caracter == '{'){
+                pila.push(caracter);
+            }
+
             
         }
     }
