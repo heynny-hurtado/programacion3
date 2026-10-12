@@ -35,6 +35,12 @@ public class MainColas {
                     break;
 
                 case 2:
+                    sala = cola.quitarSala();
+                    if (sala != null) {
+                        System.out.println("Sala quitada: " + sala);
+                    } else {
+                        System.out.println("No hay salas en la cola.");
+                    }
                     break;
 
                 case 3:
