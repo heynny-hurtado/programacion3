@@ -13,9 +13,15 @@ public class Colas {
         salasGamer = new LinkedList<>();
     }
 
-    
+
     //metodo add para agregar en este caso una sala a la cola
     public void agregarSala(String sala) {
         salasGamer.add(sala);
     }
+
+    //ahora el metodo pollpara quitar una sala
+    public String quitarSala() {
+        return salasGamer.poll();
+    }
+
 }
