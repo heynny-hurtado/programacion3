@@ -18,7 +18,7 @@ public class MainPilas {
         String juego;
 
         do {
-            System.out.println("========PILA DE VIDEOJUEGOS========");
+            System.out.println("========MENU DE VIDEOJUEGOS========");
             System.out.println("1. Agregar un videojuego");
             System.out.println("2. Quitar un videojuego");
             System.out.println("3. Consultar el videojuego");

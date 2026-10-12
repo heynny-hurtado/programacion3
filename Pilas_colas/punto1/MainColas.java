@@ -13,7 +13,7 @@ public class MainColas {
         String sala;
 
         do{
-            System.out.println("======MENU DE COLAS=======");
+            System.out.println("======MENU DE SALAS =======");
             System.out.println("1. Agregar sala");
             System.out.println("2. Quitar sala");
             System.out.println("3. Ver la primera sala");
