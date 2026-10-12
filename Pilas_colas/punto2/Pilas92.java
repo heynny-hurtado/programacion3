@@ -19,6 +19,12 @@ public class Pilas92 {
         String x = partes[0];
         String y = partes [1];
 
+        for(int i = 0; i< x.length(); i++){
+            pila.push(x.charAt(i));
+        }
+
+        String inversa ="";
+
 
     }
 }
