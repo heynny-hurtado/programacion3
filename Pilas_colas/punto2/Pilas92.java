@@ -19,12 +19,25 @@ public class Pilas92 {
         String x = partes[0];
         String y = partes [1];
 
+
+        //sirve para recorrer el carácter de la primera cadena
         for(int i = 0; i< x.length(); i++){
             pila.push(x.charAt(i));
         }
-
+        //con este creamos una cadena  vacia para construir la inversa
         String inversa ="";
 
+        while(!pila.empty()){
+            inversa = inversa + pila.pop();
+        }
+        //este es para comparar la cadena inversa con la sengunda
+        if(inversa.equals(y)){
+            System.out.println("La secuencia correcta es");
+        }else{
+            System.out.println("La secuencia incorrecta es:");
+        }
+
+        entrada.close();
 
     }
 }
