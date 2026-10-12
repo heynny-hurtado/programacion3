@@ -24,4 +24,8 @@ public class Colas {
         return salasGamer.poll();
     }
 
+    //metodo element para ver la sala que esta al frente de la cola
+    public String verSalaFrente() {
+        return salasGamer.element();
+    }
 }
