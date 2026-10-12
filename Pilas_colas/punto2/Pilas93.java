@@ -24,7 +24,17 @@ public class Pilas93 {
                 pila.push(caracter);
             }
 
-            
+            //Verifique los simbolos de cierre 
+            else if (caracter == ')' || caracter == ']' || caracter == '}'){
+
+                if(pila.isEmpty()){
+                    equilibrado = false;
+                    break;
+                }
+
+                char apertura = pila.pop();
+                
+            }
         }
     }
 }
