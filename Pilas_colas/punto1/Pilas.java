@@ -2,6 +2,7 @@ package Pilas_colas.punto1;
 
 import java.util.Stack;
 
+
 public class Pilas {
     // empecemos de nuevo, vamos a hacer una pial de juegos
     private Stack<String> videoJuegos;
@@ -36,7 +37,7 @@ public class Pilas {
     }
     //search nos permite buscar un juego en la pila y comprobar si esta o no en la pila, si esta nos devuelve la posicion del juego en la pila, si no esta nos devuelve -1
     public boolean buscarVideoJuego(String videoJuego) {
-        return videoJuegos.search(videoJuegos) != -1;
+        return videoJuegos.search(videoJuego) != -1;
     }
 
     // este nos muestra cuantos tenemos guardados en la pila
