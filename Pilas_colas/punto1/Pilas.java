@@ -10,16 +10,24 @@ public class Pilas {
         VideoJuegos = new Stack<>();
     }
 
-    //metodo para agregar un juego a la pila
+    //metodonos sirve para agregar un juego a la pila
     public void agregarJuego(String juego) {
         VideoJuegos.push(juego);
     }
 
-    //metodo para quitar un juego de la pila
+    //este metodo  es para quitar un juego de la pila
     public String quitarJuego(){
 
-        if(!VideoJuegos.isEmpty()){ //verificamos si la pila no esta vacia
+        if(!VideoJuegos.isEmpty()){ //en este verificamos si la pila no esta vacia
             return VideoJuegos.pop();//si no esta vacia, quitamos el juego de la pila y lo retornamos
+        }
+        return "No hay juegos en la pila";//si esta vacia, retornamos un mensaje
+
+    }
+
+    public String VerUltimoVideoJuego(){
+        if(!VideoJuegos.isEmpty()){ // entonces aquí verificamos si la pila no esta vacia
+            return VideoJuegos.peek();//si no esta vacia, retornamos el ultimo juego de la pila
         }
         return "No hay juegos en la pila";//si esta vacia, retornamos un mensaje
     }
