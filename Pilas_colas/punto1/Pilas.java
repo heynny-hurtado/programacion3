@@ -3,32 +3,34 @@ import java.util.Stack;
 
 public class Pilas {
     //empecemos de nuevo, vamos a hacer una pial de juegos
-    private Stack<String> VideoJuegos;
+    private Stack<String> videoJuegos;
 
     //hacemos el costructor
     public Pilas() {
-        VideoJuegos = new Stack<>();
+        videoJuegos = new Stack<>();
     }
 
-    //metodonos sirve para agregar un juego a la pila
+    //el metodo push  sirve para agregar un juego a la pila
     public void agregarJuego(String juego) {
-        VideoJuegos.push(juego);
+        videoJuegos.push(juego);
     }
 
-    //este metodo  es para quitar un juego de la pila
-    public String quitarJuego(){
-
-        if(!VideoJuegos.isEmpty()){ //en este verificamos si la pila no esta vacia
-            return VideoJuegos.pop();//si no esta vacia, quitamos el juego de la pila y lo retornamos
+    // el metodo Pop, este metodo  es para quitar un elemento (juego) de la pila
+    public String quitarJuego() {
+        if (!videoJuegos.isEmpty()) {
+            return videoJuegos.pop();
+        } else {
+            return "La pila está vacía, no hay juegos para quitar.";
         }
-        return "No hay juegos en la pila";//si esta vacia, retornamos un mensaje
-
     }
 
-    public String VerUltimoVideoJuego(){
-        if(!VideoJuegos.isEmpty()){ // entonces aquí verificamos si la pila no esta vacia
-            return VideoJuegos.peek();//si no esta vacia, retornamos el ultimo juego de la pila
+    // el metodo peek, este metodo es para ver el juego que esta en la cima de la pila
+    public String verJuegoCima() {
+        if(!videoJuegos.isEmpty()){
+            return videoJuegos.peek();
+        } else {
+            return "La pila está vacía, no hay juegos para ver.";
         }
-        return "No hay juegos en la pila";//si esta vacia, retornamos un mensaje
     }
+
 }
