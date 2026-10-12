@@ -27,6 +27,11 @@ public class MainColas {
             switch (opcion){
 
                 case 1:
+                    System.out.print("Ingrese el nombre de la sala: ");
+                    sala = entrada.nextLine();
+
+                    cola.agregarSala(sala);
+                    System.out.println("Sala agregada correctamente.");
                     break;
 
                 case 2:
