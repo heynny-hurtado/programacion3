@@ -36,6 +36,14 @@ public class Pilas96 {
                 //y ahora creamos la lista
                 Nodo primero = null;
                 Nodo ultimo = null;
+
+
+                //vamos a hacer el agregar los caracteres
+                for (int i = 0; i < frase.length(); i++) {
+                    
+                    char caracter = Character.toLowerCase(frase.charAt(i));
+                    
+                }
             }
         }
     }
