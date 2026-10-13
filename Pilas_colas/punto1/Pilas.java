@@ -4,7 +4,7 @@ import java.util.Stack;
 
 
 public class Pilas {
-    // empecemos de nuevo, vamos a hacer una pial de juegos
+    // empecemos de nuevo, vamos a hacer una pila de juegos
     private Stack<String> videoJuegos;
 
     // hacemos el costructor
