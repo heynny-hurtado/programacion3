@@ -16,7 +16,7 @@ public class Pilas95 {
         Stack<Integer> P4 = new Stack<>();
         Stack<Integer> P5 = new Stack<>();
 
-        int i, j;
+        int i, j, k;//ahremos a K
 
         // creamos el do para poder ingresar los datos
 
@@ -26,8 +26,13 @@ public class Pilas95 {
             i = leer.nextInt();
 
             if (i != 0) {
+
                 System.out.print("Ingrese j:");
                 j = leer.nextInt();
+
+                System.out.println("Ingrese k (-1 para borrar pila, 0 proceso normal):");
+                k= leer.nextInt();
+
 
                 // Agregar elementos
                 if (i > 0) {
