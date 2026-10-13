@@ -16,7 +16,7 @@ public class Pilas95 {
         Stack<Integer> P4 = new Stack<>();
         Stack<Integer> P5 = new Stack<>();
 
-        int i, j, k;//ahremos a K
+        int i, j, k;// ahremos a K
 
         // creamos el do para poder ingresar los datos
 
@@ -31,69 +31,66 @@ public class Pilas95 {
                 j = leer.nextInt();
 
                 System.out.println("Ingrese k (-1 para borrar pila, 0 proceso normal):");
-                k= leer.nextInt();
+                k = leer.nextInt();
 
-                //ahora para identificar pilas
+                // ahora para identificar pilas
                 int pila = Math.abs(i);
 
-                //Si k es -1, borrar toda la pila
-                if(k == -1){
+                // Si k es -1, borrar toda la pila
+                if (k == -1) {
 
-                    //revisar el numero de pila
-                    if(pila ==1){
+                    // revisar el numero de pila
+                    if (pila == 1) {
                         P1.clear();
-                    }else if (pila == 2){
+                    } else if (pila == 2) {
                         P2.clear();
-                    }else if (pila == 3){
+                    } else if (pila == 3) {
                         P3.clear();
-                    }else if(pila ==4){
+                    } else if (pila == 4) {
                         P4.clear();
-                    }else if (pila == 5){
+                    } else if (pila == 5) {
                         P5.clear();
-                    }else{
-                        System.out.println("Pila no valida");
-                    }
-                }else if (k == 0){
-                // Agregar elementos
-                if (i > 0) {
-
-                    if (i == 1) {
-                        P1.push(j);
-                    } else if (i == 2) {
-                        P2.push(j);
-                    } else if (i == 3) {
-                        P3.push(j);
-                    } else if (i == 4) {
-                        P4.push(j);
-                    } else if (i == 5) {
-                        P5.push(j);
                     } else {
                         System.out.println("Pila no valida");
                     }
+                } else if (k == 0) {
+                    // Agregar elementos
+                    if (i > 0) {
 
-                    // ahora vamos a eliminar elementos
+                        if (i == 1) {
+                            P1.push(j);
+                        } else if (i == 2) {
+                            P2.push(j);
+                        } else if (i == 3) {
+                            P3.push(j);
+                        } else if (i == 4) {
+                            P4.push(j);
+                        } else if (i == 5) {
+                            P5.push(j);
+                        } else {
+                            System.out.println("Pila no valida");
+                        }
 
+                        // ahora vamos a eliminar elementos
+
+                    } else {
+                        // todo esto elimina elementos
+                        if (i == 1 && !P1.empty()) {
+                            P1.pop();
+                        } else if (i == 2 && !P2.empty()) {
+                            P2.pop();
+                        } else if (i == 3 && !P3.empty()) {
+                            P3.pop();
+                        } else if (i == 4 && !P4.empty()) {
+                            P4.pop();
+                        } else if (i == 5 && !P5.empty()) {
+                            P5.pop();
+                        } else {
+                            System.out.println("La pila esta vacia ");
+                        }
+                    }
                 } else {
-
-                    i = -i; // cambia el signo del valor que tiene i
-
-                    // todo esto elimina elementos
-                    if (i == 1 && !P1.empty()) {
-                        P1.pop();
-                    } else if (i == 2 && !P2.empty()) {
-                        P2.pop();
-                    } else if (i == 3 && !P3.empty()) {
-                        P3.pop();
-                    } else if (i == 4 && !P4.empty()) {
-                        P4.pop();
-                    } else if (i == 5 && !P5.empty()) {
-                        P5.pop();
-                    } else {
-                        System.out.println("La pila esta vacia ");
-                    }
-                }
-            }else{
-                System.out.println("El valor de k debe ser -1 o 0");
+                    System.out.println("El valor de k debe ser -1 o 0");
                 }
             }
         } while (i != 0);
