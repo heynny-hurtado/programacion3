@@ -53,13 +53,7 @@ public class Pilas95 {
                     }else{
                         System.out.println("Pila no valida");
                     }
-                }
-
-
-
-
-
-
+                }else if (k == 0){
                 // Agregar elementos
                 if (i > 0) {
 
@@ -97,6 +91,9 @@ public class Pilas95 {
                     } else {
                         System.out.println("La pila esta vacia ");
                     }
+                }
+            }else{
+                System.out.println("El valor de k debe ser -1 o 0");
                 }
             }
         } while (i != 0);
