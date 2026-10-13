@@ -45,11 +45,30 @@ public class Pilas94 {
                     System.out.println("Pila no valida");
                 }
 
-              
+                //ahora vamos a eliminar elementos
 
+            }else{
+
+                i =-i; //cambia el signo del valor que tiene i
+
+                    //todo esto elimina elementos
+                if (i== 1 && !P1.empty()){
+                    P1.pop();
+                }else if (i == 2 && !P2.empty()){
+                    P2.pop();
+                }else if (i == 3 && !P3.empty()){
+                    P3.pop();
+                }else if (i == 4 && !P4.empty()){
+                    P4.pop();
+                }else if (i == 5 && !P5.empty()){
+                    P5.pop();
+                }else{
+                    System.out.println("La pila esta vacia ");
+                }
             }
             }
-        }
+        }while (i !=0);
+
     }
     
 }
