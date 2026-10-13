@@ -21,6 +21,17 @@ public class Pilas96 {
         Scanner leer = new Scanner(System.in);
 
         String frase;
+        //despues hacemos el leer las frases
+        System.out.println("Ingrese una frase vacia para terminar");
+
+        do{
+            System.out.println("Ingrese una frase");
+            frase= leer.nextLine();
+
+            if(!frase.isEmpty()){
+                
+            }
+        }
     }
 
 }
