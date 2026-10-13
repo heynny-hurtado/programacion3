@@ -69,6 +69,14 @@ public class Pilas94 {
             }
         }while (i !=0);
 
+        //metofo para mostrar las pilas
+        System.out.println("Pila 1:" +P1);
+        System.out.println("Pila 2:" +P2);
+        System.out.println("pila 3:" +P3);
+        System.out.println("pila 4:"+ P4);
+        System.out.println("pila 5:" +P5);
+
+        leer.close();
     }
-    
+
 }
