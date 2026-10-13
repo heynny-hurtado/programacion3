@@ -29,7 +29,13 @@ public class Pilas96 {
             frase= leer.nextLine();
 
             if(!frase.isEmpty()){
-                
+
+                //vamos a crear la pila
+                Stack<Character> pila = new Stack<>();
+
+                //y ahora creamos la lista
+                Nodo primero = null;
+                Nodo ultimo = null;
             }
         }
     }
