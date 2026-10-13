@@ -49,9 +49,9 @@ public class Pilas93 {
             equilibrado = false;
         }
 
-        if(equilibrado){
+        if (equilibrado) {
             System.out.println("La expresion esta equilibriada");
-        }else{
+        } else {
             System.out.println("La expresion no esta equilibrada");
         }
         entrada.close();
