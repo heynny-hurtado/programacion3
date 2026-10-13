@@ -50,8 +50,6 @@ public class Pilas94 {
 
                 } else {
 
-                    i = -i; // cambia el signo del valor que tiene i
-
                     // todo esto elimina elementos
                     if (i == 1 && !P1.empty()) {
                         P1.pop();
