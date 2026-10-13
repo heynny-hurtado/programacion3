@@ -16,6 +16,21 @@ public class Pilas94 {
         Stack<Integer> P5 = new Stack<>();
         
         int i, j;
+
+        //creamos el do para poder ingresar los datos
+
+        do{
+            //leer los datoos
+            System.out.println("Ingrese i(0 para teminar)");
+            i = leer.nextInt();
+
+            if(i != 0){
+                System.out.print("Ingrese j:");
+                j = leer.nextInt();
+
+            //Agregar elementos
+            }
+        }
     }
     
 }
