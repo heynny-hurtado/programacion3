@@ -33,6 +33,32 @@ public class Pilas95 {
                 System.out.println("Ingrese k (-1 para borrar pila, 0 proceso normal):");
                 k= leer.nextInt();
 
+                //ahora para identificar pilas
+                int pila = Math.abs(i);
+
+                //Si k es -1, borrar toda la pila
+                if(k == -1){
+
+                    //revisar el numero de pila
+                    if(pila ==1){
+                        P1.clear();
+                    }else if (pila == 2){
+                        P2.clear();
+                    }else if (pila == 3){
+                        P3.clear();
+                    }else if(pila ==4){
+                        P4.clear();
+                    }else if (pila == 5){
+                        P5.clear();
+                    }else{
+                        System.out.println("Pila no valida");
+                    }
+                }
+
+
+
+
+
 
                 // Agregar elementos
                 if (i > 0) {
