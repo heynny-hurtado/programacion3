@@ -14,7 +14,7 @@ public class Pilas94 {
         Stack<Integer> P3 = new Stack<>();
         Stack<Integer> P4 = new Stack<>();
         Stack<Integer> P5 = new Stack<>();
-        
+
         int i, j;
 
         //creamos el do para poder ingresar los datos
@@ -29,6 +29,25 @@ public class Pilas94 {
                 j = leer.nextInt();
 
             //Agregar elementos
+            if (i> 0){
+
+                if (i == 1){
+                    P1.push(j);
+                }else if (i== 2){
+                    P2.push(j);
+                }else if (i==3){
+                    P3.push(j);
+                }else if (i==4){
+                    P4.push(j);
+                }else if (i==5){
+                    P5.push(j);
+                }else{
+                    System.out.println("Pila no valida");
+                }
+
+              
+
+            }
             }
         }
     }
