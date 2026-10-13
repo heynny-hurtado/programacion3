@@ -10,3 +10,5 @@ public class Pilas96 {
         char dato;
         Nodosiguiente;
     }
+
+}
