@@ -1,26 +1,24 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Principal{
-    public static void main(String []arggs){
+public class Principal {
+    public static void main(String[] arggs) {
         Scanner entrada = new Scanner(System.in);
         ArrayList<Estudiante> estudiantes = new ArrayList<>();
 
-
-        //ahora  vamos a crear los objetos de los tipos de danza que tiene la clase
+        // ahora vamos a crear los objetos de los tipos de danza que tiene la clase
         DanceCls hiphop = new DanceCls("hiphop");
-        DanceCls afrodance = new DanceCls ("afrodance");
+        DanceCls afrodance = new DanceCls("afrodance");
         DanceCls popping = new DanceCls("popping");
-        DanceCls locking = new DanceCls ("locking");
+        DanceCls locking = new DanceCls("locking");
         DanceCls breaking = new DanceCls("breaking");
 
-        //el de historial
+        // el de historial
         Historial historial = new Historial();
 
         int opcion;
 
-
-        do{
+        do {
             System.out.println("========DANCE STUDIO==========");
             System.out.println("1. Registrar estduiante");
             System.out.println("2. Inscribir estudiante");
@@ -36,8 +34,43 @@ public class Principal{
             System.out.println("Seleccione una opcion:");
             opcion = entrada.nextInt();
             entrada.nextLine();
-        }while(opcion !=10);
-    }
 
+            switch (opcion) {
+                case 1:
+
+                    break;
+                case 2:
+
+                    break;
+
+                case 3:
+                    break;
+
+                case 4:
+                    break;
+
+                case 5:
+                    break;
+
+                case 6:
+                    break;
+
+                case 7:
+                    break;
+
+                case 8:
+                    break;
+
+                case 9:
+                    break;
+
+                case 10:
+                    break;
+
+                default:
+                    break;
+            }
+        } while (opcion != 10);
+    }
 
 }
