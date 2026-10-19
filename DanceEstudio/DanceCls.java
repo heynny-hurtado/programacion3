@@ -21,5 +21,16 @@ public class DanceCls{
     public ArrayList<Estudiante>gEstudiantes(){
         return estudiantes;
     }
+    //metodo para inscribir
+    //este metodo nos permite revisar si hay espacio dispobible
+    public boolean inscribirEstudiante(Estudiante estudiante){
+        if(estudiantes.size()<cupoMaximo){
+            estudiantes.add(estudiante);//si hay menos de 10 e studiantes agrega con este metodo
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 
 }
