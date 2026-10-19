@@ -51,5 +51,16 @@ public class DanceCls{
         }
         return null;
     }
+    //metodo para consultar un cupo disponible
+    public int cuposDisponibles(){
+        return cupoMaximo - estudiantes.size();
+    }
+
+    //metodo para mostarr los estudiantes
+    public void mostrarEstudiantes(){
+        for(Estudiante estudiante : estudiantes ){
+            System.out.println(estudiante);
+        }
+    }
 
 }
