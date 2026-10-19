@@ -37,6 +37,7 @@ public class Principal {
 
             switch (opcion) {
                 case 1:
+                    //para registrar un estudiante y asignarle un numero
                     System.out.println("Nombre del estudiante");
                     String nombre = entrada.nextLine();
 
@@ -53,7 +54,19 @@ public class Principal {
 
                     break;
                 case 2:
-                System.out.println("Inscribir estudiante");
+                System.out.println("Numero del estudiante");
+                int numBuscar = entrada.nextInt();
+                entrada.nextLine();
+
+                System.out.println("Seleccione el estilo de baile");
+                System.out.println("1. Hiphop");
+                System.out.println("2. Afrodance");
+                System.out.println("3. Popping");
+                System.out.println("4. Locking");
+                System.out.println("5. Breaking");
+
+                int estilo = entrada.nextInt();
+                entrada.nextLine();
                     break;
 
                 case 3:
