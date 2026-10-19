@@ -9,6 +9,7 @@ public class Estudiante {
     // creamos el constructor
     public Estudiante(String nombre, int numero) {
         this.nombre = nombre;
+        this.numero = numero;
     }
 
     // creamso los gets
