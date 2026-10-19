@@ -8,5 +8,18 @@ public class DanceCls{
     //creamos el limite de estudiantes de cada clase
     private final int cupoMaximo = 10;
 
-    
+
+    public DanceCls(String estilo){
+        this.estilo = estilo; //para que guardemos los estilos 
+        estudiantes = new ArrayList<>(); //este es el que nos permite crear una lista vacia para guardar los estudiantes inscritos
+    }
+    //creamos el get este devuelve el nombre del estilo de baile
+    public String getEstilo(){
+        return estilo;
+    }
+    //este de aquí devuelve la lista de estudiantes inscritos
+    public ArrayList<Estudiante>gEstudiantes(){
+        return estudiantes;
+    }
+
 }
