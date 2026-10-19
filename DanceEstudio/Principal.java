@@ -37,34 +37,43 @@ public class Principal {
 
             switch (opcion) {
                 case 1:
+                    System.out.println("Registrar estudiante");
 
                     break;
                 case 2:
-
+                System.out.println("Inscribir estudiante");
                     break;
 
                 case 3:
+                System.out.println("Retirar estudiante");
                     break;
 
                 case 4:
+                System.out.println("Buscar estudiante");
                     break;
 
                 case 5:
+                System.out.println("Mostrar estudiante");
                     break;
 
                 case 6:
+                System.out.println("Consultar cupos disponibles");
                     break;
 
                 case 7:
+                System.out.println("Mostrar cola de espera");
                     break;
 
                 case 8:
+                System.out.println("Mostrar historial");
                     break;
 
                 case 9:
+                System.out.println("Deshacer ultima accion");
                     break;
 
                 case 10:
+                    System.out.println("Saliendo del programa");
                     break;
 
                 default:
