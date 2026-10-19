@@ -37,7 +37,19 @@ public class Principal {
 
             switch (opcion) {
                 case 1:
-                    System.out.println("Registrar estudiante");
+                    System.out.println("Nombre del estudiante");
+                    String nombre = entrada.nextLine();
+
+                    System.out.println("Numero del estudiante");
+                    int numero = entrada.nextInt();
+                    entrada.nextLine();
+
+                    Estudiante estudiante = new Estudiante(nombre, numero);
+                    estudiantes.add(estudiante);
+
+                    historial.guardarAccion("Se registro a"+ nombre);
+
+                    System.out.println("Estudiante registrado correctamente");
 
                     break;
                 case 2:
