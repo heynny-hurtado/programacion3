@@ -99,7 +99,18 @@ public class Principal {
                     break;
 
                 case 3:
-                    System.out.println("Retirar estudiante");
+                    System.out.println("Numero del estuifante");
+                    int numRetirar = entrada.nextInt();
+                    entrada.nextLine();
+
+                    Estudiante retirar = null;
+
+                    for(Estudiante e : estudiantes){
+                        if(e.getNumero()== numRetirar){
+                            retirar = e;
+                        }
+
+                    }
                     break;
 
                 case 4:
