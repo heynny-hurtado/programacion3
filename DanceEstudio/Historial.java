@@ -9,7 +9,6 @@ public class Historial {
         acciones = new Stack<>();
     }
 
-    Historial historial = new Historial();
 
     // metodo para guardar las acciones
     public void guardarAccion(String accion) {
@@ -21,7 +20,7 @@ public class Historial {
         if(!acciones.empty()){
             return acciones.pop();
         }
-        return "No hay acciones en el historial";|
+        return "No hay acciones en el historial";
     }
 
     // metodo para consultar
