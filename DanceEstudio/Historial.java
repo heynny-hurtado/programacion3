@@ -23,4 +23,11 @@ public class Historial {
         }
         return "No hay acciones en el historial";|
     }
+    //metodo para consultar
+    public String ultimaAccion(){
+        if(!acciones.empty()){
+            return acciones.peek();
+        }
+        return "No hay acciones en el historial";
+    }
 }
