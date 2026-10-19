@@ -58,6 +58,19 @@ public class Principal {
                 int numBuscar = entrada.nextInt();
                 entrada.nextLine();
 
+                Estudiante encontrado = null;
+
+                for(Estudiante e : estudiantes){
+                    if(e.getNumero()== numBuscar){
+                        encontrado = e;
+                        break;
+                    }
+                }
+                if(encontrado == null){
+                    System.out.println("Estudiante no registrado");
+                    break;
+                }
+
                 System.out.println("Seleccione el estilo de baile");
                 System.out.println("1. Hiphop");
                 System.out.println("2. Afrodance");
@@ -65,8 +78,20 @@ public class Principal {
                 System.out.println("4. Locking");
                 System.out.println("5. Breaking");
 
-                int estilo = entrada.nextInt();
+                int opcionEstilo = entrada.nextInt();
                 entrada.nextLine();
+
+                DanceCls clase = seleCls(opcionEstilo, hiphop, afrodance, popping, locking, breaking);
+
+                if(clase == null){
+                    System.out.println("Estilo no valido");
+                }else if (clase.inscribirEstudiante(encontrado)){
+                    historial.guardarAccion("Inscripcion de"+ encontrado.getNombre()
+                    +"en"+ clase.getEstilo());
+                    System.out.println("Estudiante inscrito correctamente");
+                }else{
+                    System.out.println("clase llena: El estudiante se agregara a la cola de espera");
+                }
                     break;
 
                 case 3:
@@ -106,6 +131,32 @@ public class Principal {
                     break;
             }
         } while (opcion != 10);
-    }
+        entrada.close();
 
+}
+
+//metodo para seleccionar la clase de baile
+public static DanceCls seleCls(
+    int opcionEstilo,
+    DanceCls hiphop,
+    DanceCls afroDance,
+    DanceCls popping,
+    DanceCls locking,
+    DanceCls breaking){
+
+    switch (opcionEstilo){
+        case 1:
+            return hiphop;
+        case 2:
+            return afroDance;
+        case 3:
+            return popping;
+        case 4:
+            return locking;
+        case 5:
+            return breaking;
+        default:
+            break;
+    }
+ }
 }
