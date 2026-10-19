@@ -1,10 +1,13 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class DanceCls{
 
     private String estilo;
     //nos permite crear una variable que almacene varios objetos de tipo estudiante 
     private ArrayList<Estudiante>estudiantes;
+    private   Queue<Estudiante> espera;
     //creamos el limite de estudiantes de cada clase
     private final int cupoMaximo = 10;
 
@@ -12,6 +15,7 @@ public class DanceCls{
     public DanceCls(String estilo){
         this.estilo = estilo; //para que guardemos los estilos 
         estudiantes = new ArrayList<>(); //este es el que nos permite crear una lista vacia para guardar los estudiantes inscritos
+        espera = new LinkedList<>();
     }
     //creamos el get este devuelve el nombre del estilo de baile
     public String getEstilo(){
@@ -36,6 +40,10 @@ public class DanceCls{
         for (int i = 0;i < estudiantes.size(); i++ ) { 
             if(estudiantes.get(i).getNumero()==numero){
                 estudiantes.remove(i);
+
+                if (!espera.isEmpty()){
+                    estudiantes.add(espera.poll());
+                }
                 return true;
             }
         }
@@ -61,6 +69,16 @@ public class DanceCls{
         for(Estudiante estudiante : estudiantes ){
             System.out.println(estudiante);
         }
+    }
+    //metodo para mostar la cola de espera
+    public void mostarEspera(){
+        for (Estudiante estudiante : espera){
+            System.out.println(estudiante);
+        }
+    }
+    //metodo para consultar  la cantidad de estudiantes que estan en espera
+    public int cantidadEnEspera(){
+        return espera.size();
     }
 
 }
