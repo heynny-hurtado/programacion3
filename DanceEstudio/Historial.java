@@ -30,4 +30,8 @@ public class Historial {
         }
         return "No hay acciones en el historial";
     }
+    //metodo que cuenta las acciones 
+    public int cantidadAcciones(){
+        return acciones.size();
+    }
 }
