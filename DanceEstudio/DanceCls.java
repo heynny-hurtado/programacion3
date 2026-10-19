@@ -31,6 +31,15 @@ public class DanceCls{
             return false;
         }
     }
-
+    //metodo para retirar un estudiante
+    public boolean retirarEstudiante(int numero){
+        for (int i = 0;i < estudiantes.size(); i++ ) { 
+            if(estudiantes.get(i).getNumero()==numero){
+                estudiantes.remove(i);
+                return true;
+            }
+        }
+        return false;
+    }
 
 }
