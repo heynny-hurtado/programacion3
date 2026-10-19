@@ -2,7 +2,7 @@
 
 public class Estudiante {
 
-    // crearlos los datos que tendra nuestra clase
+    // crear  los datos que tendra nuestra clase
     private String nombre;
     private int numero;
 
@@ -10,7 +10,7 @@ public class Estudiante {
     public Estudiante(String nombre, int numero) {
         this.nombre = nombre;
     }
-
+    //creamso los gets
     public String getNombre() {
         return nombre;
     }
@@ -18,16 +18,16 @@ public class Estudiante {
     public int getNumero() {
         return numero;
     }
-
+    //creamos los set
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public void serNumero(int numero) {
+    public void setNumero(int numero) {
         this.numero = numero;
     }
 
     public String toString() {
-        return "Codigo: " + numero + " - Nombre: " + numero;
+        return "numero: " + numero + " - Nombre: " + numero;
     }
 }
