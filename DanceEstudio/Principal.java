@@ -14,6 +14,30 @@ public class Principal{
         DanceCls locking = new DanceCls ("locking");
         DanceCls breaking = new DanceCls("breaking");
 
+        //el de historial
+        Historial historial = new Historial();
+
+        int opcion;
+
+
+        do{
+            System.out.println("========DANCE STUDIO==========");
+            System.out.println("1. Registrar estduiante");
+            System.out.println("2. Inscribir estudiante");
+            System.out.println("3. Retirar estudiante");
+            System.out.println("4. Buscar estudiante");
+            System.out.println("5. Mostar estudiante");
+            System.out.println("6. Consultar cupos disponibles");
+            System.out.println("7. Mostrar cola de espera");
+            System.out.println("8. Mostrar historial");
+            System.out.println("9. Deshacer ultima accion");
+            System.out.println("10. Salir");
+
+            System.out.println("Seleccione una opcion:");
+            opcion = entrada.nextInt();
+            entrada.nextLine();
+        }while(opcion !=10);
     }
+
 
 }
