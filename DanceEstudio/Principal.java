@@ -108,9 +108,23 @@ public class Principal {
                     for(Estudiante e : estudiantes){
                         if(e.getNumero()== numRetirar){
                             retirar = e;
+                            break;
                         }
 
                     }
+                    if (retirar ==null){
+                        System.out.println("Estudiante no registrado");
+                        break;
+                    }
+                    System.out.println("Seleccione el estilo de baile");
+                    System.out.println("1. hiphop");
+                    System.out.println("2. Afrodance");
+                    System.out.println("3. popping ");
+                    System.out.println("4. LLocking");
+                    System.out.println("5. Breaking");
+
+
+
                     break;
 
                 case 4:
