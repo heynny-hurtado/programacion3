@@ -42,4 +42,14 @@ public class DanceCls{
         return false;
     }
 
+    //metodo para buscar un estudiante
+    public Estudiante  buscarEstudiante(int numero){
+        for (int i = 0; i < estudiantes.size(); i++){
+            if (estudiantes.get(i).getNumero()== numero){
+                return estudiantes.get(i);
+            }
+        }
+        return null;
+    }
+
 }
