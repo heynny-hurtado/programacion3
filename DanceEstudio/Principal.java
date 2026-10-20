@@ -105,14 +105,14 @@ public class Principal {
 
                     Estudiante retirar = null;
 
-                    for(Estudiante e : estudiantes){
-                        if(e.getNumero()== numRetirar){
+                    for (Estudiante e : estudiantes) {
+                        if (e.getNumero() == numRetirar) {
                             retirar = e;
                             break;
                         }
 
                     }
-                    if (retirar ==null){
+                    if (retirar == null) {
                         System.out.println("Estudiante no registrado");
                         break;
                     }
@@ -123,8 +123,21 @@ public class Principal {
                     System.out.println("4. LLocking");
                     System.out.println("5. Breaking");
 
+                    int opcionRetirar = entrada.nextInt();
+                    entrada.nextLine();
 
+                    DanceCls claseRetirar = seleCls(opcionRetirar,
+                            hiphop, afrodance, popping, locking, breaking);
 
+                    if (claseRetirar == null) {
+                        System.out.println("Estilo no valido");
+                    } else if (claseRetirar.retirarEstudiante(numRetirar)) {
+                        historial.guardarAccion("se retiro a" + retirar.getNombre() + "de"
+                                + claseRetirar.getEstilo());
+
+                        System.out.println("Estudiante retirado correctamente");
+
+                    }
                     break;
 
                 case 4:
