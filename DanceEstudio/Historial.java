@@ -35,4 +35,15 @@ public class Historial {
     public int cantidadAcciones() {
         return acciones.size();
     }
+
+    //metodo para nostrar el historial
+    public void mostrarHistorial(){
+        if(acciones.empty()){
+            System.out.println("No hay acciones ne el historial");
+        }else{
+            for(String accion : acciones) {
+                System.out.println(accion);
+            }
+        }
+    }
 }

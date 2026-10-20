@@ -219,11 +219,16 @@ public class Principal {
                     break;
 
                 case 8:
-                    System.out.println("Mostrar historial");
+                    System.out.println("Historial de acciones");
+                    historial.mostrarHistorial();
                     break;
 
                 case 9:
                     System.out.println("Deshacer ultima accion");
+
+                    String accion = historial.deshacerAccion();
+
+                    System.out.println(accion);
                     break;
 
                 case 10:
