@@ -99,7 +99,12 @@ public class Principal {
 
                         System.out.println("Estudiante inscrito correctamente");
                     } else {
-                        System.out.println("Clase llena: El estudiante se agregara a la cola de espera");
+                        historial.guardarAccion("Estudiante"
+                                    +encontrado.getNombre()
+                                    +"agregado a la cola cola de espera de"
+                                    +clase.getEstilo());
+                        System.out.println("Clase llena");
+                        System.out.println("Estudiante agregado a la cola de espera");
                     }
                     break;
 
