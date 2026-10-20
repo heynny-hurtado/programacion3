@@ -162,7 +162,15 @@ public class Principal {
                     break;
 
                 case 5:
-                    System.out.println("Mostrar estudiante");
+                    System.out.println("Lista de estudiantes registrados");
+
+                    if(estudiantes.isEmpty()){
+                        System.out.println("No hay estudiantes registrados");
+                    }else{
+                        for (Estudiante e: estudiantes){
+                            System.out.println(e);
+                        }
+                    }
                     break;
 
                 case 6:
