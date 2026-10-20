@@ -32,9 +32,10 @@ public class DanceCls {
     // este metodo nos permite revisar si hay espacio dispobible
     public boolean inscribirEstudiante(Estudiante estudiante) {
         if (estudiantes.size() < cupoMaximo) {
-            estudiantes.add(estudiante);// si hay menos de 10 e studiantes agrega con este metodo
+            estudiantes.add(estudiante);
             return true;
         } else {
+            espera.offer(estudiante);
             return false;
         }
     }
