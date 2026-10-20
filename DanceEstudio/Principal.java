@@ -14,10 +14,9 @@ public class Principal {
         estudiantes.add(new Estudiante("Parra", 106));
         estudiantes.add(new Estudiante("Castro", 107));
         estudiantes.add(new Estudiante("Jose", 108));
-        estudiantes.add(new Estudiante("Esteban" ,109));
+        estudiantes.add(new Estudiante("Esteban", 109));
         estudiantes.add(new Estudiante("Kevin", 110));
-        estudiantes.add(new Estudiante("Glortia", 111));
-
+        estudiantes.add(new Estudiante("Gloria", 111));
 
         // ahora vamos a crear los objetos de los tipos de danza que tiene la clase
         DanceCls hiphop = new DanceCls("hiphop");
@@ -109,9 +108,9 @@ public class Principal {
                         System.out.println("Estudiante inscrito correctamente");
                     } else {
                         historial.guardarAccion("Estudiante"
-                                    +encontrado.getNombre()
-                                    +"agregado a la cola cola de espera de"
-                                    +clase.getEstilo());
+                                + encontrado.getNombre()
+                                + "agregado a la cola cola de espera de"
+                                + clase.getEstilo());
                         System.out.println("Clase llena");
                         System.out.println("Estudiante agregado a la cola de espera");
                     }
@@ -173,8 +172,11 @@ public class Principal {
                         }
                     }
                     if (encontradoBuscar != null) {
+                        int posicion = estudiantes.indexOf(encontradoBuscar);
+
                         System.out.println("Estudiante encontrado");
                         System.out.println(encontradoBuscar);
+                        System.out.println("posicion en la lista: " + posicion);
                     } else {
                         System.out.println("Estudiante no registrado");
                     }
@@ -251,8 +253,8 @@ public class Principal {
                     break;
 
                 case 10:
-                    System.out.println("Total de estudiantes registrados"
-                                        +estudiantes.size());
+                    System.out.println("Total de estudiantes registrados: "
+                            + estudiantes.size());
                     break;
 
                 case 11:
@@ -264,7 +266,7 @@ public class Principal {
                     break;
             }
 
-        } while (opcion != 10);
+        } while (opcion != 11);
 
         entrada.close();
     }
