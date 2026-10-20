@@ -174,7 +174,13 @@ public class Principal {
                     break;
 
                 case 6:
-                    System.out.println("Consultar cupos disponibles");
+                    System.out.println("Cupos disponibles por estilo de baile");
+
+                    System.out.println("Hiphop: "+hiphop.cuposDisponibles());
+                    System.out.println("Afrodance:"+ afrodance.cuposDisponibles());
+                    System.out.println("Popping :"+ popping.cuposDisponibles());
+                    System.out.println("Locking: "+ locking.cuposDisponibles());
+                    System.out.println("Breaking: "+ breaking.cuposDisponibles());
                     break;
 
                 case 7:

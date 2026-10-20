@@ -31,6 +31,6 @@ public class Estudiante {
     }
 
     public String toString() {
-        return "numero: " + numero + " - Nombre: " + numero;
+        return "numero: " + numero + " - Nombre: " + nombre;
     }
 }
