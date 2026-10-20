@@ -141,7 +141,18 @@ public class Principal {
                     break;
 
                 case 4:
-                    System.out.println("Buscar estudiante");
+                    System.out.println("Numero del estudiante que desea buscar");
+                    int numBuscarEst = entrada.nextInt();
+                    entrada.nextLine();
+
+                    Estudiante encontradoBuscar = null;
+
+                    for(Estudiante e : estudiantes){
+                        if(e.getNumero()== numBuscarEst){
+                            encontradoBuscar = e;
+                            break;
+                        }
+                    }
                     break;
 
                 case 5:
