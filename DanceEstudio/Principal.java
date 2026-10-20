@@ -6,6 +6,10 @@ public class Principal {
         Scanner entrada = new Scanner(System.in);
         ArrayList<Estudiante> estudiantes = new ArrayList<>();
 
+        estudiantes.add(new Estudiante("Ana", 101));
+        estudiantes.add(new Estudiante("Camilo", 102));
+        estudiantes.add(new Estudiante("Laura", 103));
+
         // ahora vamos a crear los objetos de los tipos de danza que tiene la clase
         DanceCls hiphop = new DanceCls("hiphop");
         DanceCls afrodance = new DanceCls("afrodance");
@@ -29,7 +33,8 @@ public class Principal {
             System.out.println("7. Mostrar cola de espera");
             System.out.println("8. Mostrar historial");
             System.out.println("9. Deshacer ultima accion");
-            System.out.println("10. Salir");
+            System.out.println("10. Total de estudiantes registrados");
+            System.out.println("11. salir");
 
             System.out.println("Seleccione una opcion:");
             opcion = entrada.nextInt();
@@ -232,7 +237,25 @@ public class Principal {
                     break;
 
                 case 10:
+                    System.out.println("Total de estudiantes registrados"
+                                        +estudiantes.size());
+                    break;
+
+                case 11:
                     System.out.println("Saliendo del programa");
+                    if (entrada.hasNextInt()) {
+                        opcion = entrada.nextInt();
+                        entrada.nextLine();
+
+                        if (opcion < 1 || opcion > 10) {
+                            System.out.println("Error: opcion no valida. Vuelva a seleccionar.");
+                            opcion = 0;
+                        }
+                    } else {
+                        System.out.println("Error: debe ingresar un numero. Vuelva a seleccionar.");
+                        entrada.nextLine();
+                        opcion = 0;
+                    }
                     break;
 
                 default:
