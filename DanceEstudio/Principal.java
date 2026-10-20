@@ -147,16 +147,16 @@ public class Principal {
 
                     Estudiante encontradoBuscar = null;
 
-                    for(Estudiante e : estudiantes){
-                        if(e.getNumero()== numBuscarEst){
+                    for (Estudiante e : estudiantes) {
+                        if (e.getNumero() == numBuscarEst) {
                             encontradoBuscar = e;
                             break;
                         }
                     }
-                    if(encontradoBuscar != null){
+                    if (encontradoBuscar != null) {
                         System.out.println("Estudiante encontrado");
                         System.out.println(encontradoBuscar);
-                    }else{
+                    } else {
                         System.out.println("Estudiante no registrado");
                     }
                     break;
@@ -164,10 +164,10 @@ public class Principal {
                 case 5:
                     System.out.println("Lista de estudiantes registrados");
 
-                    if(estudiantes.isEmpty()){
+                    if (estudiantes.isEmpty()) {
                         System.out.println("No hay estudiantes registrados");
-                    }else{
-                        for (Estudiante e: estudiantes){
+                    } else {
+                        for (Estudiante e : estudiantes) {
                             System.out.println(e);
                         }
                     }
@@ -176,44 +176,44 @@ public class Principal {
                 case 6:
                     System.out.println("Cupos disponibles por estilo de baile");
 
-                    System.out.println("Hiphop: "+hiphop.cuposDisponibles());
-                    System.out.println("Afrodance:"+ afrodance.cuposDisponibles());
-                    System.out.println("Popping :"+ popping.cuposDisponibles());
-                    System.out.println("Locking: "+ locking.cuposDisponibles());
-                    System.out.println("Breaking: "+ breaking.cuposDisponibles());
+                    System.out.println("Hiphop: " + hiphop.cuposDisponibles());
+                    System.out.println("Afrodance:" + afrodance.cuposDisponibles());
+                    System.out.println("Popping :" + popping.cuposDisponibles());
+                    System.out.println("Locking: " + locking.cuposDisponibles());
+                    System.out.println("Breaking: " + breaking.cuposDisponibles());
                     break;
 
                 case 7:
                     System.out.println("Cola de espera por estilo de baile");
 
                     System.out.println("\nHiphop:");
-                    if(hiphop.cantidadEnEspera()>0){
+                    if (hiphop.cantidadEnEspera() > 0) {
                         hiphop.mostarEspera();
-                    }else{
+                    } else {
                         System.out.println("No hay estudiantes en espera");
                     }
                     System.out.println("\nAfrodance:");
-                    if (afrodance.cantidadEnEspera()>0){
+                    if (afrodance.cantidadEnEspera() > 0) {
                         afrodance.mostarEspera();
-                    }else{
+                    } else {
                         System.out.println("Nohay estudiantes en espera");
                     }
                     System.out.println("\nPopping:");
-                    if(popping.cantidadEnEspera()> 0){
+                    if (popping.cantidadEnEspera() > 0) {
                         popping.mostarEspera();
-                    }else{
+                    } else {
                         System.out.println("No hay estudiantes en espera");
                     }
                     System.out.println("\nLocking:");
-                    if(locking.cantidadEnEspera()>0){
+                    if (locking.cantidadEnEspera() > 0) {
                         locking.mostarEspera();
-                    }else{
+                    } else {
                         System.out.println("No hay estudiantes en espera");
                     }
                     System.out.println("\nBreaking:");
-                    if(breaking.cantidadEnEspera()>0){
+                    if (breaking.cantidadEnEspera() > 0) {
                         breaking.mostarEspera();
-                    }else{
+                    } else {
                         System.out.println("No hay estudiantes en espera");
                     }
                     break;
