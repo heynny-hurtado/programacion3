@@ -9,6 +9,15 @@ public class Principal {
         estudiantes.add(new Estudiante("Ana", 101));
         estudiantes.add(new Estudiante("Camilo", 102));
         estudiantes.add(new Estudiante("Laura", 103));
+        estudiantes.add(new Estudiante("heynny", 104));
+        estudiantes.add(new Estudiante("Felipe", 105));
+        estudiantes.add(new Estudiante("Parra", 106));
+        estudiantes.add(new Estudiante("Castro", 107));
+        estudiantes.add(new Estudiante("Jose", 108));
+        estudiantes.add(new Estudiante("Esteban" ,109));
+        estudiantes.add(new Estudiante("Kevin", 110));
+        estudiantes.add(new Estudiante("Glortia", 111));
+
 
         // ahora vamos a crear los objetos de los tipos de danza que tiene la clase
         DanceCls hiphop = new DanceCls("hiphop");
