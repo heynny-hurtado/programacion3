@@ -185,10 +185,34 @@ public class Principal {
 
                 case 7:
                     System.out.println("Cola de espera por estilo de baile");
-                   
+
                     System.out.println("\nHiphop:");
                     if(hiphop.cantidadEnEspera()>0){
                         hiphop.mostarEspera();
+                    }else{
+                        System.out.println("No hay estudiantes en espera");
+                    }
+                    System.out.println("\nAfrodance:");
+                    if (afrodance.cantidadEnEspera()>0){
+                        afrodance.mostarEspera();
+                    }else{
+                        System.out.println("Nohay estudiantes en espera");
+                    }
+                    System.out.println("\nPopping:");
+                    if(popping.cantidadEnEspera()> 0){
+                        popping.mostarEspera();
+                    }else{
+                        System.out.println("No hay estudiantes en espera");
+                    }
+                    System.out.println("\nLocking:");
+                    if(locking.cantidadEnEspera()>0){
+                        locking.mostarEspera();
+                    }else{
+                        System.out.println("No hay estudiantes en espera");
+                    }
+                    System.out.println("\nBreaking:");
+                    if(breaking.cantidadEnEspera()>0){
+                        breaking.mostarEspera();
                     }else{
                         System.out.println("No hay estudiantes en espera");
                     }
