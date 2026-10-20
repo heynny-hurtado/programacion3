@@ -248,19 +248,6 @@ public class Principal {
 
                 case 11:
                     System.out.println("Saliendo del programa");
-                    if (entrada.hasNextInt()) {
-                        opcion = entrada.nextInt();
-                        entrada.nextLine();
-
-                        if (opcion < 1 || opcion > 10) {
-                            System.out.println("Error: opcion no valida. Vuelva a seleccionar.");
-                            opcion = 0;
-                        }
-                    } else {
-                        System.out.println("Error: debe ingresar un numero. Vuelva a seleccionar.");
-                        entrada.nextLine();
-                        opcion = 0;
-                    }
                     break;
 
                 default:
