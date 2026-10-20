@@ -153,6 +153,12 @@ public class Principal {
                             break;
                         }
                     }
+                    if(encontradoBuscar != null){
+                        System.out.println("Estudiante encontrado");
+                        System.out.println(encontradoBuscar);
+                    }else{
+                        System.out.println("Estudiante no registrado");
+                    }
                     break;
 
                 case 5:
