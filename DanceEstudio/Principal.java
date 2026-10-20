@@ -184,7 +184,14 @@ public class Principal {
                     break;
 
                 case 7:
-                    System.out.println("Mostrar cola de espera");
+                    System.out.println("Cola de espera por estilo de baile");
+                   
+                    System.out.println("\nHiphop:");
+                    if(hiphop.cantidadEnEspera()>0){
+                        hiphop.mostarEspera();
+                    }else{
+                        System.out.println("No hay estudiantes en espera");
+                    }
                     break;
 
                 case 8:
