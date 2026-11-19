@@ -1,5 +1,5 @@
 package projectoFinal;
 
-public class Evaluaciones {
+public class Materia {
     
 }

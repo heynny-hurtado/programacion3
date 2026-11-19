@@ -1,7 +1,7 @@
-package projectoFinal;
+package projectoFinal.herencia;
 
-//esta clase nos servira para crear los objetos de tipo persona, que sera en este caso estudiantes
-public class Persona {
+
+public abstract class Persona {
 
     //colocaremos los atributos de la clase persona
     private String nombre;
@@ -14,7 +14,9 @@ public class Persona {
         this.email = email;
         this.ID = ID;
     }
-    //creamos los gets
+    //la parte abstracta de la clase persona
+    public abstract void mostrarInformacion();
+
     public String getNombre() {
         return nombre;
     }
@@ -23,6 +25,15 @@ public class Persona {
     }
     public int getID() {
         return ID;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
 }
