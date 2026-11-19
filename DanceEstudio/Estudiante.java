@@ -1,4 +1,4 @@
-//vamsoa iniciar con estudiante
+//vamos a iniciar con estudiante
 
 public class Estudiante {
 

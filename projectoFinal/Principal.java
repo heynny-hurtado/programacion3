@@ -1,5 +1,5 @@
 package projectoFinal;
 
-public class Main {
+public class Principal {
     
 }
