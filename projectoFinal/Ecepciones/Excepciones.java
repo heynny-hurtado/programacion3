@@ -1,4 +1,4 @@
-package projectoFinal;
+package projectoFinal.Ecepciones;
 
 public class Excepciones {
     
