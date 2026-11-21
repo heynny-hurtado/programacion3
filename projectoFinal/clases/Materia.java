@@ -1,5 +1,5 @@
 package projectoFinal.clases;
 
-public class Materias {
+public class Materia {
     
 }
