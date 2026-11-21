@@ -83,13 +83,13 @@ public class Materia {
 
     }
     //metodo para verificar si el estudiante cumple
-    public boolean cumplePreRequisitos(Estudiante estudiante) {
-        for (Materia materia : preRequisitos) {
-            if (!estudiante.tieneMateriaAprobada(materia.preRequisitos())) {
+    public boolean cumplePreRequisitos(Estudiante estudiante){
+        for (Materia materia: preRequisitos){
+
+            if(!estudiante.tienMateriaAprobada(materia.getCodigo())){
                 return false;
             }
         }
-        return true;
     }
     //metodo para inscribir un estudiante
     public void inscribirEstudiante(Estudiante estudiante){
@@ -110,13 +110,13 @@ public class Materia {
     //metodo para cancelar
     public void cancelarInscripcion(Estudiante estudiante) {
 
-        if(inscritos.remove(estudiante)){
+        if (inscritos.remove(estudiante)) {
 
-            while(!colaEspera.isEmpty()){
+            while (!colaEspera.isEmpty()) {
 
                 Estudiante siguiente = colaEspera.poll();
 
-                if(cumplePreRequisitos(siguiente)){
+                if (cumplePreRequisitos(siguiente)) {
                     inscritos.add(siguiente);
                     break;
             }
