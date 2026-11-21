@@ -83,13 +83,19 @@ public class Materia {
 
     }
     //metodo para verificar si el estudiante cumple
-    public boolean cumplePreRequisitos(Estudiante estudiante){
-        for (Materia materia: preRequisitos){
+    public boolean cumplePreRequisitos(Estudiante estudiante) {
 
-            if(!estudiante.tienMateriaAprobada(materia.getCodigo())){
+        if(estudiante == null) {
+            return false;
+        }
+
+        for (Materia materia : preRequisitos) {
+
+            if(!estudiante.tieneMateriaAprobada(materia.getCodigo())) {
                 return false;
             }
         }
+        return true;
     }
     //metodo para inscribir un estudiante
     public void inscribirEstudiante(Estudiante estudiante){

@@ -52,9 +52,10 @@ public class Estudiante extends Persona {
         }
         return false;
     }
+
     //metodo para registrar
-    public void registrarNota(int numSemetre, int indicMateria){
-        return notas.registrarNota(numSemetre, indicMateria, notas);
+    public void registrarNota(int numSemetre, int indicMateria, Double nota){
+    notas.registrarNota(numSemetre, indicMateria, nota);
     }
     //metodo para consultar
     public Double consultarNota(int numSemestre, int indiceMateria){
@@ -68,6 +69,7 @@ public class Estudiante extends Persona {
     public double calcularPromedioAcumulado(){
         return notas.clacularPromedioAcumulado();
     }
+
 
     //metodo para mostrar información
     @Override

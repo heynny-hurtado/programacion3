@@ -1,8 +1,8 @@
 package projectoFinal.clases;
 
 public class Notas {
-    
-    //creamos  los atributos 
+
+    //creamos  los atributos
     private Double[][]notas;
 
     //hacemso el constructor
@@ -45,12 +45,12 @@ public class Notas {
         public double calcularPromedioSemestre(int numeSemestre){
             int fila = numeSemestre - 1; // Ajustar el número de semestre a un índice de fila (0-9)
 
-            if(fila >= 0 || fila >= notas.length){
+            if(fila < 0 || fila >= notas.length){
                 return 0.0;
             }
             double suma = 0.0;
             int cantidadNotas = 0;
-            
+
             for(int j=0; j<notas[fila].length; j++){
 
                 if(notas[fila][j]!= null){
@@ -62,22 +62,25 @@ public class Notas {
         }
         //calcular el promedio acumulado
         public double clacularPromedioAcumulado(){
-            double suma = 0.0;
-            int cantidadNotas = 0;
+        double suma = 0.0;
+        int cantidadNotas = 0;
 
-            for(int i=0; i<notas.length; i++){
-                for(int j=0; j<notas[i].length; j++){
-                    if(notas[i][j] != null){
-                        suma += notas[i][j];
-                        cantidadNotas++;
-                    }
+        for(int i = 0; i < notas.length; i++){
+            for(int j = 0; j < notas[i].length; j++){
+
+                if(notas[i][j] != null){
+                    suma += notas[i][j];
+                    cantidadNotas++;
                 }
             }
-            return (cantidadNotas > 0) ? suma / cantidadNotas : 0.0;
         }
+
+        return (cantidadNotas > 0) ? suma / cantidadNotas : 0.0;
+    }
         //metodo de mostara o generar el historial de materias reprobadas
         public void generarReporteReprobadas(){
             boolean hayReprobadas = false;
+
             System.out.println("Materias reprobadas:");
             for(int i = 0; i < notas.length; i++){
 
