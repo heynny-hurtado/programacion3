@@ -1,5 +1,5 @@
 package projectoFinal;
 
-public class Materia {
+public class GestionUni {
     
 }

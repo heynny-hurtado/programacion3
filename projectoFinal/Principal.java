@@ -1,5 +1,5 @@
 package projectoFinal;
 
-public class Horario {
+public class Principal {
     
 }
