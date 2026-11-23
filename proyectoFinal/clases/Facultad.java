@@ -1,7 +1,7 @@
 package proyectoFinal.clases;
 
 public class Facultad {
-    
+
     //creamos los atributos
     private String codigo;
     private String nombre;
@@ -18,5 +18,5 @@ public class Facultad {
     public String getNombre(){
         return nombre;
     }
-    
+
 }
