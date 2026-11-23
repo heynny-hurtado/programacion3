@@ -8,7 +8,7 @@ import java.util.Stack;
 import java.util.Queue;
 import java.util.ArrayDeque;
 
-
+import proyectoFinal.Excepciones.Excepciones;
 //importamos las clases y todo
 import proyectoFinal.clases.Aula;
 import proyectoFinal.clases.Campus;
@@ -61,6 +61,76 @@ public class ContEstructura {
 
 
     }
+    // crear el metodo estudiante
+    public void registrarEstudiante(Estudiante estudiante){
+
+        if(estudiante != null){
+
+            String ID = String.valueOf(estudiante.getID());
+
+            estudiantesMap.put(ID, estudiante);
+        }
+    }
+
+    //metodo para buscar
+    public Estudiante buscarEstudiante(String ID)
+
+    throws Excepciones.EstudianteNoEncontradoException{
+
+        Estudiante estudiante = estudiantesMap.get(ID);
+
+        if(estudiante == null){
+            throw new Excepciones.EstudianteNoEncontradoException("El estudiante no existe");
+
+        }
+        return estudiante;
+    }
+    // metodos para litar un estudiante
+    public void listarEstudiante(){
+
+        for(Estudiante estudiante :  estudiantesMap.values()){
+            estudiante.mostrarInformacion();
+            System.out.println("-----------------------");
+        }
+    }
+
+    public Map<String, Estudiante> getEstudianteMap(){
+        return estudiantesMap;
+    }
+
+    //creamos el metodo para registrar una materia
+    public void registrarMateria(Materia materia){
+
+        if(materia != null){
+            materiaMap.put(materia.getCodigo(), materia);
+        }
+    }
+    //ahora hacemos el metodo para buscar una materia
+    public Materia buscMateria(String codigo){
+        return materiaMap.get(codigo);
+    }
+
+    //ahora crearemos el metodo para listar materia
+    public void listarMaterias(){
+
+        for(Materia materia : materiaMap.values()){
+
+            System.out.println("codigo"+ materia.getCodigo());
+            System.out.println("Nombre:" + materia.getNomMateria());
+            System.out.println("Creditos:"+ materia.getCreditos());
+            System.out.println("Cupos:"+ materia.getCuposMaximos());
+
+            System.out.println("-----------------");
+        }
+    }
+
+    //metodo para eliminar una materia
+    public void eliminarMateria(String codigo){
+        materiaMap.remove(codigo);
+    }
+    
+
+
 
 
 
