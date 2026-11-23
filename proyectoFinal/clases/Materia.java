@@ -1,8 +1,9 @@
-package projectoFinal.clases;
+package proyectoFinal.clases;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-import projectoFinal.herencia.Estudiante;
+
+import proyectoFinal.herencia.Estudiante;
 
 public class Materia {
 

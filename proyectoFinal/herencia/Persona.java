@@ -1,4 +1,4 @@
-package projectoFinal.herencia;
+package proyectoFinal.herencia;
 
 
 public abstract class Persona {

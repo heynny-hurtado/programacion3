@@ -1,4 +1,4 @@
-package projectoFinal.clases;
+package proyectoFinal.clases;
 
 public class Notas {
 

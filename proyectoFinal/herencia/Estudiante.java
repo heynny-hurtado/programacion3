@@ -1,9 +1,10 @@
-package projectoFinal.herencia;
+package proyectoFinal.herencia;
 
 import java.util.LinkedList;
 import java.util.List;
-import projectoFinal.clases.Notas;
-import projectoFinal.clases.Materia;
+
+import proyectoFinal.clases.Materia;
+import proyectoFinal.clases.Notas;
 
 
 public class Estudiante extends Persona {

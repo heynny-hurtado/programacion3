@@ -1,4 +1,4 @@
-package projectoFinal.Estructura;
+package proyectoFinal.Estructura;
 
 public class ContEstructura {
     

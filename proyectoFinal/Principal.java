@@ -1,4 +1,4 @@
-package projectoFinal;
+package proyectoFinal;
 
 public class Principal {
     
