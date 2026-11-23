@@ -27,8 +27,8 @@ public class Excepciones {
         }
 
     }
-    public static class PrerequisitoNoAprobadoException extends Exception{
-        public PrerequisitoNoAprobadoException(String mensaje){
+    public static class PreRequisitoNoAprobadoException extends Exception {
+        public PreRequisitoNoAprobadoException(String mensaje) {
             super(mensaje);
         }
     }
@@ -43,6 +43,11 @@ public class Excepciones {
             super(mensaje);        }
     }
 
+    public static class PilaDeshacerVaciaException extends Exception {
+        public PilaDeshacerVaciaException(String mensaje) {
+            super(mensaje);
+        }
+    }
 
     }
 
