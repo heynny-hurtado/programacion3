@@ -15,12 +15,6 @@ public class Excepciones {
         }
     }
 
-    public static class AulatadNoEncontradaException extends Exception{
-        public AulatadNoEncontradaException(String mensaje){
-            super(mensaje);
-        }
-    }
-
     public static class  ArchivoInvalidoException extends  Exception{
         public  ArchivoInvalidoException(String mensaje){
             super(mensaje);
