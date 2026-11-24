@@ -61,130 +61,29 @@ public class ContEstructura {
 
 
     }
-    // crear el metodo estudiante
-    public void registrarEstudiante(Estudiante estudiante){
 
-        if(estudiante != null){
-
-            String ID = String.valueOf(estudiante.getID());
-
-            estudiantesMap.put(ID, estudiante);
-        }
-    }
-
-    //metodo para buscar
-    public Estudiante buscarEstudiante(String ID)
-
-    throws Excepciones.EstudianteNoEncontradoException{
-
-        Estudiante estudiante = estudiantesMap.get(ID);
-
-        if(estudiante == null){
-            throw new Excepciones.EstudianteNoEncontradoException("El estudiante no existe");
-
-        }
-        return estudiante;
-    }
-    // metodos para litar un estudiante
-    public void listarEstudiante(){
-
-        for(Estudiante estudiante :  estudiantesMap.values()){
-            estudiante.mostrarInformacion();
-            System.out.println("-----------------------");
-        }
-    }
-
-    public Map<String, Estudiante> getEstudianteMap(){
+    //los get de los mapas
+    public Map<String, Estudiante> getEstudiantesMap(){
         return estudiantesMap;
     }
 
-    //creamos el metodo para registrar una materia
-    public void registrarMateria(Materia materia){
+    public Map<String, Aula> getAulaMap(){
+        return aulaMap;
+    }
 
-        if(materia != null){
-            materiaMap.put(materia.getCodigo(), materia);
+    public Facultad[] getFacultades(){
+        return facultades;
+    }
+    public Campus getCampus(){
+        return campus;
+    }
+
+    public void registrarEstudiante(Estudiante estudiante){
+
+        if(estudiante != null){
+            String ID = String.valueOf(estudiante.getID());
+            estudiantesMap.put(ID, estudiante);
         }
     }
-    //ahora hacemos el metodo para buscar una materia
-    public Materia buscMateria(String codigo){
-        return materiaMap.get(codigo);
-    }
-
-    //ahora crearemos el metodo para listar materia
-    public void listarMaterias(){
-
-        for(Materia materia : materiaMap.values()){
-
-            System.out.println("codigo"+ materia.getCodigo());
-            System.out.println("Nombre:" + materia.getNomMateria());
-            System.out.println("Creditos:"+ materia.getCreditos());
-            System.out.println("Cupos:"+ materia.getCuposMaximos());
-
-            System.out.println("-----------------");
-        }
-    }
-
-    //metodo para eliminar una materia
-    public void eliminarMateria(String codigo){
-        materiaMap.remove(codigo);
-    }
-
-    //metodo para registrar un aula
-    public void registrarAula(Aula aula){
-
-        if(aula != null){
-            aulaMap.put(aula.getNumAula(), aula);
-        }
-    }
-
-    //ahora para buscar un aula
-    public Aula buscarAula(String numAula){
-        return aulaMap.get(numAula);
-    }
-
-    //metodo para consultar si hgay disponibilidad
-    public boolean consultarDisponibilidad(String numAula, int dia, int hora){
-
-        Aula aula = buscarAula(numAula);
-
-        if(aula == null){
-            System.out.println("Esta aula no existe");
-            return false;
-        }
-
-        return aula.consultarDisponibilidad(dia, hora);
-    }
-
-    //ahora hacemos el metodo para reservar un horario
-    public void reservarHorario(String numAula, int dia, int hora, int duracion)
-    throws Excepciones.HorarioConflictivoException{
-
-        Aula aula = buscarAula(numAula);
-
-        if(aula == null){
-            System.out.println("Esta aula no existe");
-            return;
-        }
-        aula.reservar(dia, hora, duracion);
-    }
-
-    //ahora hacemos el metodo para liberar un horario
-    public void liberarHorario(String numAula, int dia, int hora, int duracion){
-
-        Aula aula =  buscarAula(numAula);
-
-        if(aula == null){
-            System.out.println("Esta aula no existe");
-            return;
-        }
-        aula.liberar(dia, hora, duracion);
-    }
-
-
-
-
-
-
-
-
 }
+
