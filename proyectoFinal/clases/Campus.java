@@ -1,4 +1,3 @@
-
 package proyectoFinal.clases;
 
 public class Campus {
@@ -12,15 +11,13 @@ public class Campus {
 
         if (edificios == null || edificios.length < 5) {
             throw new IllegalArgumentException(
-                    "El campus debe tener minimo 5 edificios"
-            );
+                    "El campus debe tener minimo 5 edificios");
         }
 
         if (matrizDistancias == null ||
                 matrizDistancias.length != edificios.length) {
             throw new IllegalArgumentException(
-                    "La matriz no corresponde a los edificios"
-            );
+                    "La matriz no corresponde a los edificios");
         }
 
         // verificamos que la matriz sea cuadrada y simetrica
@@ -29,8 +26,7 @@ public class Campus {
             if (matrizDistancias[i] == null ||
                     matrizDistancias[i].length != edificios.length) {
                 throw new IllegalArgumentException(
-                        "La matriz debe ser cuadrada"
-                );
+                        "La matriz debe ser cuadrada");
             }
 
             for (int j = 0; j < matrizDistancias.length; j++) {
@@ -38,8 +34,7 @@ public class Campus {
                 if (matrizDistancias[i][j] < 0 ||
                         matrizDistancias[i][j] != matrizDistancias[j][i]) {
                     throw new IllegalArgumentException(
-                            "Las distancias deben ser positivas y simetricas"
-                    );
+                            "Las distancias deben ser positivas y simetricas");
                 }
             }
         }
@@ -114,8 +109,7 @@ public class Campus {
 
                 if (distancia > 0 && !visitados[j]) {
 
-                    int nuevaDistancia =
-                            distancias[actual] + distancia;
+                    int nuevaDistancia = distancias[actual] + distancia;
 
                     if (nuevaDistancia < distancias[j]) {
                         distancias[j] = nuevaDistancia;
@@ -135,8 +129,7 @@ public class Campus {
         int[] camino = new int[cantidad];
         int total = 0;
 
-        for (int actual = fin; actual != -1;
-                actual = anterior[actual]) {
+        for (int actual = fin; actual != -1; actual = anterior[actual]) {
 
             camino[total] = actual;
             total++;
@@ -156,7 +149,6 @@ public class Campus {
 
         System.out.println();
         System.out.println(
-                "Distancia total: " + distancias[fin] + " metros"
-        );
+                "Distancia total: " + distancias[fin] + " metros");
     }
 }
