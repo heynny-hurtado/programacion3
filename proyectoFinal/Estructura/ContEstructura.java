@@ -62,6 +62,29 @@ public class ContEstructura {
         facultades[3] = new Facultad("FD", "Facultad de Derecho");
         facultades[4] = new Facultad("FE", "Facultad de Educación");
 
+
+    // Inicializamos las materias
+    inicializarMaterias();
+    }
+
+
+    private void inicializarMaterias() {
+
+        // Creamos las materias
+        Materia m1 = new Materia("MAT101", "Matematicas", 30, 3);
+        Materia m2 = new Materia("PRO101", "Programacion I", 30, 4);
+        Materia m3 = new Materia("PRO102", "Programacion II", 25, 4);
+        Materia m4 = new Materia("BD101", "Bases de Datos", 25, 3);
+
+        // Registramos las materias
+        registrarMateria(m1);
+        registrarMateria(m2);
+        registrarMateria(m3);
+        registrarMateria(m4);
+
+        // Establecemos los prerrequisitos
+        m3.agregarPreRequisito(m2);
+        m4.agregarPreRequisito(m2);
     }
 
     // los get de los mapas
