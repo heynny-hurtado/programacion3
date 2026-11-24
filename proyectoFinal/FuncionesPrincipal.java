@@ -286,6 +286,9 @@ public class FuncionesPrincipal {
 
         System.out.println("\n===== AGREGAR PRE-REQUISITO =====");
 
+        System.out.println("\nMaterias registradas:");
+        contenedor.listarMaterias();
+
         String codigo = leerTexto("Codigo de la materia: ");
         Materia materia = contenedor.buscarMateria(codigo);
 
@@ -303,7 +306,7 @@ public class FuncionesPrincipal {
         }
 
         if (materia == pre ||
-            materia.getPreRequisitos().contains(pre)) {
+                materia.getPreRequisitos().contains(pre)) {
 
             System.out.println("El pre-requisito ya existe o no es valido.");
             return;
