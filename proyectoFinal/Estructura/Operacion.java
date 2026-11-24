@@ -24,7 +24,7 @@ public class Operacion {
         return tipoOperacion;
     }
 
-    public Object getDatoANterior() {
+    public Object getDatoAnterior() {
         return datoAnterior;
     }
 
