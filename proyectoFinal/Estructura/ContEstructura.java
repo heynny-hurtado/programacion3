@@ -23,9 +23,12 @@ public class ContEstructura {
     private TreeMap<String, Aula> aulaMap;
     private Map<String, Materia> materiaMap;
 
-    private Stack<Object> pilaDeshacer;
-    private Stack<Object> pilaRehacer;
+    private Stack<Operacion> pilaDeshacer;
+    private Stack<Operacion> pilaRehacer;
+
+
     private Stack<Object> pilaReportes;
+    private Stack<Object> pilaAdelanteReportes;
 
     private Queue<String[]> colaBatch;
 
@@ -42,7 +45,9 @@ public class ContEstructura {
 
         this.pilaDeshacer = new Stack<>();
         this.pilaRehacer = new Stack<>();
+
         this.pilaReportes = new Stack<>();
+        this.pilaAdelanteReportes = new Stack<>();
 
         this.colaBatch = new ArrayDeque<>();
         this.facultades = new Facultad[5];
@@ -257,10 +262,11 @@ public class ContEstructura {
     }
 
     // metodo para Deshacer
-    public void agregarOperacionDeshacer(Object operacion) {
+    public void agregarOperacionDeshacer(Operacion operacion) {
 
         if (operacion != null) {
             pilaDeshacer.push(operacion);
+
         }
     }
 
@@ -279,8 +285,8 @@ public class ContEstructura {
         return pilaDeshacer.isEmpty();
     }
 
-    // metodo para pila hacer
-    public void agregarOperacionRehacer(Object operacion) {
+    // metodo para pila rehacer
+    public void agregarOperacionRehacer(Operacion operacion) {
 
         if (operacion != null) {
             pilaRehacer.push(operacion);
