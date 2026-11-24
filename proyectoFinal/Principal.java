@@ -1,7 +1,7 @@
+
 package proyectoFinal;
 
 import java.util.Scanner;
-import proyectoFinal.FuncionesPrincipal;
 
 public class Principal {
 
@@ -11,7 +11,7 @@ public class Principal {
 
         FuncionesPrincipal funciones = new FuncionesPrincipal(entrada);
 
-        int opcion;
+        int opcion = 0;
 
         do {
 
@@ -59,14 +59,30 @@ public class Principal {
 
             System.out.print("\nSeleccione una opcion: ");
 
-            opcion = entrada.nextInt();
+            String dato = entrada.nextLine();
 
-            if (opcion >= 1 && opcion <= 21) {
-                funciones.ejecutarOperacion(opcion);
-            } else if (opcion == 22) {
-                System.out.println("Gracias por utilizar el sistema.");
-            } else {
-                System.out.println("Opcion no valida. Intente nuevamente.");
+            try {
+
+                opcion = Integer.parseInt(dato);
+
+                if (opcion >= 1 && opcion <= 21) {
+
+                    funciones.ejecutarOperacion(opcion);
+
+                } else if (opcion == 22) {
+
+                    System.out.println("Gracias por utilizar el sistema.");
+
+                } else {
+
+                    System.out.println("Opcion no valida. Intente nuevamente.");
+                }
+
+            } catch (NumberFormatException e) {
+
+                opcion = 0;
+                System.out.println("Debe ingresar un numero valido.");
+
             }
 
         } while (opcion != 22);

@@ -1,3 +1,4 @@
+
 package proyectoFinal.Estructura;
 
 import proyectoFinal.clases.Aula;
@@ -67,7 +68,7 @@ public class Operacion {
 
             default:
                 throw new IllegalArgumentException(
-                        "Operacion no reconocida");
+                        "Operacion no reconocida: " + tipoOperacion);
         }
     }
 
@@ -102,8 +103,7 @@ public class Operacion {
 
             default:
                 throw new IllegalArgumentException(
-                        "Operacion no reconocida");
+                        "Operacion no reconocida: " + tipoOperacion);
         }
     }
-
 }
