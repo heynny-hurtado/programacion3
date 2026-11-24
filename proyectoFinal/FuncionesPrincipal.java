@@ -608,10 +608,7 @@ public class FuncionesPrincipal {
 
         contenedor.encontrarRuta(origen, destino);
     }
-
-    // ==========================================
     // REPORTES ACADEMICOS
-    // ==========================================
 
     // opcion 16
 
