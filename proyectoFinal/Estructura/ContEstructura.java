@@ -26,7 +26,6 @@ public class ContEstructura {
     private Stack<Operacion> pilaDeshacer;
     private Stack<Operacion> pilaRehacer;
 
-
     private Stack<Object> pilaReportes;
     private Stack<Object> pilaAdelanteReportes;
 
@@ -214,7 +213,9 @@ public class ContEstructura {
 
         if (aula == null) {
             System.out.println("Esta aula no se encuentra");
+            return;
         }
+
         aula.liberar(dia, hora, duracion);
     }
 
@@ -271,7 +272,7 @@ public class ContEstructura {
     }
 
     // metodo para obtener la operacion
-    public Object obtenerOperacionDeshacer()
+    public Operacion obtenerOperacionDeshacer()
             throws Excepciones.PilaDeshacerVaciaException {
 
         if (pilaDeshacer.isEmpty()) {
@@ -293,7 +294,7 @@ public class ContEstructura {
         }
     }
 
-    public Object obtenerOperacionRehacer() {
+    public Operacion obtenerOperacionRehacer() {
 
         if (pilaRehacer.isEmpty()) {
             return null;
