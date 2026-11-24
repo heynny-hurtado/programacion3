@@ -18,15 +18,21 @@ public class Notas {
     // metodo para registrar las notas
     public void registrarNota(int numeSemetre, int indiceMateria, Double nota) {
 
-        int fila = numeSemetre - 1; // Ajustar el número de semestre a un índice de fila (0-9)
+        int fila = numeSemetre - 1;
 
-        if (fila >= 0 && fila < notas.length
-                && indiceMateria >= 0
-                && indiceMateria < notas[fila].length
-                && nota != null && nota >= 0 && nota <= 5) {
-
-            notas[fila][indiceMateria] = nota;
+        if (fila < 0 || fila >= notas.length) {
+            throw new IllegalArgumentException("El semestre debe estar entre 1 y 10.");
         }
+
+        if (indiceMateria < 0 || indiceMateria >= notas[fila].length) {
+            throw new IllegalArgumentException("El indice de la materia no es valido.");
+        }
+
+        if (nota == null || nota < 0 || nota > 5) {
+            throw new IllegalArgumentException("La nota debe estar entre 0 y 5.");
+        }
+
+        notas[fila][indiceMateria] = nota;
     }
 
     // consultar una nota
@@ -62,7 +68,7 @@ public class Notas {
     }
 
     // calcular el promedio acumulado
-    public double clacularPromedioAcumulado() {
+    public double calcularPromedioAcumulado() {
         double suma = 0.0;
         int cantidadNotas = 0;
 

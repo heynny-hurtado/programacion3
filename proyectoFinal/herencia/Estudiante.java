@@ -71,7 +71,7 @@ public class Estudiante extends Persona {
 
     // promedio acomulado
     public double calcularPromedioAcumulado() {
-        return notas.clacularPromedioAcumulado();
+        return notas.calcularPromedioAcumulado();
     }
 
     // metodo para mostrar información

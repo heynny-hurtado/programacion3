@@ -9,7 +9,7 @@ public class Principal {
 
         Scanner entrada = new Scanner(System.in);
 
-        FuncionesPrincipal funciones = new FuncionesPrincipal();
+        FuncionesPrincipal funciones = new FuncionesPrincipal(entrada);
 
         int opcion;
 

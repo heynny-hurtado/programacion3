@@ -1,3 +1,4 @@
+
 package proyectoFinal.clases;
 
 public class Campus {
@@ -7,40 +8,15 @@ public class Campus {
     private int[][] matrizDistancias;
 
     // constructor
-    public Campus(String[] edificios, int[][] matrizDistancias) {
+    public Campus(String[] edificios) {
 
         if (edificios == null || edificios.length < 5) {
             throw new IllegalArgumentException(
                     "El campus debe tener minimo 5 edificios");
         }
 
-        if (matrizDistancias == null ||
-                matrizDistancias.length != edificios.length) {
-            throw new IllegalArgumentException(
-                    "La matriz no corresponde a los edificios");
-        }
-
-        // verificamos que la matriz sea cuadrada y simetrica
-        for (int i = 0; i < matrizDistancias.length; i++) {
-
-            if (matrizDistancias[i] == null ||
-                    matrizDistancias[i].length != edificios.length) {
-                throw new IllegalArgumentException(
-                        "La matriz debe ser cuadrada");
-            }
-
-            for (int j = 0; j < matrizDistancias.length; j++) {
-
-                if (matrizDistancias[i][j] < 0 ||
-                        matrizDistancias[i][j] != matrizDistancias[j][i]) {
-                    throw new IllegalArgumentException(
-                            "Las distancias deben ser positivas y simetricas");
-                }
-            }
-        }
-
         this.edificios = edificios;
-        this.matrizDistancias = matrizDistancias;
+        this.matrizDistancias = new int[edificios.length][edificios.length];
     }
 
     // buscar un edificio
@@ -54,6 +30,28 @@ public class Campus {
         }
 
         return -1;
+    }
+
+    // agregar una conexion entre edificios
+    public void agregarConexion(String origen, String destino, int distancia) {
+
+        int i = buscarEdificio(origen);
+        int j = buscarEdificio(destino);
+
+        if (i == -1 || j == -1) {
+            throw new IllegalArgumentException(
+                    "Uno de los edificios no existe");
+        }
+
+        if (i == j || distancia <= 0) {
+            throw new IllegalArgumentException(
+                    "La conexion no es valida");
+        }
+
+        matrizDistancias[i][j] = distancia;
+        matrizDistancias[j][i] = distancia;
+
+        System.out.println("Conexion agregada correctamente");
     }
 
     // algoritmo de Dijkstra

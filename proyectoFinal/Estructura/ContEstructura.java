@@ -246,14 +246,27 @@ public class ContEstructura {
     }
 
     // metodo para registrar un campus
-    public void registrarCampus(
-            String[] edificios, int[][] matrizDistancias) {
+    public void registrarCampus(String[] edificios) {
 
-        campus = new Campus(edificios, matrizDistancias);
+        if (campus != null) {
+            throw new IllegalStateException("El campus ya fue registrado");
+        }
+
+        campus = new Campus(edificios);
     }
 
-    public void encontrarRuta(String origen, String destino) {
+    // metodo para agregar una conexion
+    public void agregarConexion(String origen, String destino, int distancia) {
 
+        if (campus == null) {
+            throw new IllegalStateException("Primero debe registrar el campus");
+        }
+
+        campus.agregarConexion(origen, destino, distancia);
+    }
+
+    // metodo para encontrar una ruta
+    public void encontrarRuta(String origen, String destino) {
         if (campus == null) {
             System.out.println("Primero debes registrar el campus");
             return;
@@ -261,7 +274,6 @@ public class ContEstructura {
 
         campus.encontrarRuta(origen, destino);
     }
-
     // metodo para Deshacer
     public void agregarOperacionDeshacer(Operacion operacion) {
 
