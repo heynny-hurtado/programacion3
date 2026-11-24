@@ -1,4 +1,3 @@
-
 package proyectoFinal.Estructura;
 
 import proyectoFinal.clases.Aula;
